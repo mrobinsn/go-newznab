@@ -9,11 +9,14 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
+var apiKey = "YOUR_API_KEY_HERE"
+
 func TestUsenetCrawlerClient(t *testing.T) {
 	log.SetLevel(log.DebugLevel)
 
 	Convey("I have setup a client", t, func() {
-		client := New("YOUR_API_KEY_HERE")
+		So(apiKey, ShouldNotEqual, "YOUR_API_KEY_HERE")
+		client := New(apiKey)
 
 		Convey("I can search", func() {
 			results, err := client.Search(CategoryTVSD, 2870, 10, 1)
@@ -37,6 +40,12 @@ func TestUsenetCrawlerClient(t *testing.T) {
 				}
 
 				So(len(nzb.Comments), ShouldBeGreaterThan, 0)
+			})
+
+			Convey("I can get the download url", func() {
+				url := client.DownloadURL(results[0])
+				So(len(url), ShouldBeGreaterThan, 0)
+				log.Infof("URL: %s", url)
 			})
 
 			Convey("I can download the NZB", func() {
