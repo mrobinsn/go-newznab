@@ -111,9 +111,14 @@ func (c Client) PopulateComments(nzb *NZB) error {
 	return nil
 }
 
+// DownloadURL returns a URL to download the NZB from
+func (c Client) DownloadURL(nzb NZB) string {
+	return c.withAPIKey(fmt.Sprintf(download, nzb.ID))
+}
+
 // Download returns the bytes of the actual NZB file for the given NZB
 func (c Client) Download(nzb NZB) ([]byte, error) {
-	return getURL(c.withAPIKey(fmt.Sprintf(download, nzb.ID)))
+	return getURL(c.DownloadURL(nzb))
 }
 
 func getURL(url string) ([]byte, error) {
