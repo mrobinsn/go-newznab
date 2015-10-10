@@ -1,6 +1,7 @@
 package usenetcrawler
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
@@ -9,7 +10,7 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/inhies/go-newznab"
+	"github.com/tehjojo/newznab"
 )
 
 var (
@@ -39,7 +40,7 @@ func New(apikey string) Client {
 // Search returns NZBs for the given parameters
 func (c Client) Search(category int, tvRageID int, season int, episode int) ([]NZB, error) {
 	var nzbs []NZB
-	log.Debugln("usenetcrawler:Client:Search: searching")
+	log.Debug("usenetcrawler:Client:Search: searching")
 	resp, err := getURL(c.withAPIKey(fmt.Sprintf(tvSpecific, tvRageID, category, season, episode)))
 	if err != nil {
 		return nzbs, err
@@ -49,8 +50,9 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 	if err != nil {
 		return nil, err
 	}
-	log.Infof("usenetcrawler:Client:Search: found %d NZBs", len(feed.Channel.NZBs))
+	log.WithField("num", len(feed.Channel.NZBs)).Info("usenetcrawler:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
+		log.Debug(remoteNZBJsonString(gotNZB))
 		nzb := NZB{
 			Title:       gotNZB.Title,
 			Description: gotNZB.Description,
@@ -85,7 +87,7 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 
 // PopulateComments fills in the Comments for the given NZB
 func (c Client) PopulateComments(nzb *NZB) error {
-	log.Debugln("usenetcrawler:Client:PopulateComments: getting comments")
+	log.Debug("usenetcrawler:Client:PopulateComments: getting comments")
 	data, err := getURL(c.withAPIKey(fmt.Sprintf(comments, nzb.ID)))
 	if err != nil {
 		return err
@@ -102,7 +104,10 @@ func (c Client) PopulateComments(nzb *NZB) error {
 			Content: rawComment.Description,
 		}
 		if parsedPubDate, err := time.Parse(time.RFC1123Z, rawComment.PubDate); err != nil {
-			log.Errorf("usenetcrawler:Client:PopulateComments: failed to parse date: %v: %v", rawComment.PubDate, err)
+			log.WithFields(log.Fields{
+				"pub_date": rawComment.PubDate,
+				"err":      err,
+			}).Error("usenetcrawler:Client:PopulateComments: failed to parse date")
 		} else {
 			comment.PubDate = parsedPubDate
 		}
@@ -122,7 +127,7 @@ func (c Client) Download(nzb NZB) ([]byte, error) {
 }
 
 func getURL(url string) ([]byte, error) {
-	log.Debugf("usenetcrawler:Client:getURL: getting %v", url)
+	log.WithField("url", url).Debug("usenetcrawler:Client:getURL: getting url")
 	res, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -135,7 +140,7 @@ func getURL(url string) ([]byte, error) {
 		return nil, err
 	}
 
-	log.Debugf("usenetcrawler:Client:getURL: got %d bytes", len(data))
+	log.WithField("num_bytes", len(data)).Debug("usenetcrawler:Client:getURL: retrieved")
 
 	return data, nil
 }
@@ -157,4 +162,9 @@ type rssComment struct {
 	Title       string `xml:"title"`
 	Description string `xml:"description"`
 	PubDate     string `xml:"pubDate"`
+}
+
+func remoteNZBJsonString(nzb newznab.NZB) string {
+	jsonString, _ := json.MarshalIndent(nzb, "", "  ")
+	return string(jsonString)
 }
