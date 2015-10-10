@@ -22,21 +22,21 @@ func TestUsenetCrawlerClient(t *testing.T) {
 			results, err := client.Search(CategoryTVSD, 2870, 10, 1)
 
 			for _, result := range results {
-				log.Infoln(result.Pretty())
+				log.Info(result.JSONString())
 			}
 
 			So(err, ShouldBeNil)
 			So(len(results), ShouldBeGreaterThan, 0)
 
 			Convey("I can populate the comments for an NZB", func() {
-				nzb := results[0]
+				nzb := results[1]
 				So(len(nzb.Comments), ShouldEqual, 0)
 				So(nzb.NumComments, ShouldBeGreaterThan, 0)
 				err := client.PopulateComments(&nzb)
 				So(err, ShouldBeNil)
 
 				for _, comment := range nzb.Comments {
-					log.Infoln(comment.Pretty())
+					log.Info(comment.JSONString())
 				}
 
 				So(len(nzb.Comments), ShouldBeGreaterThan, 0)
@@ -53,7 +53,10 @@ func TestUsenetCrawlerClient(t *testing.T) {
 				So(err, ShouldBeNil)
 
 				md5Sum := md5.Sum(bytes)
-				log.Infof("Downloaded %d bytes, md5: %s", len(bytes), base64.StdEncoding.EncodeToString(md5Sum[:]))
+				log.WithFields(log.Fields{
+					"num_bytes": len(bytes),
+					"md5":       base64.StdEncoding.EncodeToString(md5Sum[:]),
+				}).Info("downloaded")
 
 				So(len(bytes), ShouldBeGreaterThan, 0)
 			})

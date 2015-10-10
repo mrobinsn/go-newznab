@@ -1,7 +1,7 @@
 package usenetcrawler
 
 import (
-	"fmt"
+	"encoding/json"
 	"time"
 )
 
@@ -25,25 +25,14 @@ type Comment struct {
 	PubDate time.Time
 }
 
-// Pretty returns a pretty-print string representation of this NZB
-func (n NZB) Pretty() string {
-	return fmt.Sprintf(`NZB(%s)
-        Title: %s
-        Description: %s
-        Size: %d bytes
-        AirDate: %s
-        PubDate: %s
-        NumGrabs: %d
-        NumComments: %d
-        `, n.ID, n.Title, n.Description, n.Size, n.AirDate,
-		n.PubDate, n.NumGrabs, n.NumComments)
+// JSONString returns a JSON string representation of this NZB
+func (n NZB) JSONString() string {
+	jsonString, _ := json.MarshalIndent(n, "", "  ")
+	return string(jsonString)
 }
 
-// Pretty returns a pretty-print string representation of this Comment
-func (c Comment) Pretty() string {
-	return fmt.Sprintf(`Comment
-        Title: %s
-        Content: %s
-        PubDate: %s
-        `, c.Title, c.Content, c.PubDate)
+// JSONString returns a JSON string representation of this Comment
+func (c Comment) JSONString() string {
+	jsonString, _ := json.MarshalIndent(c, "", "  ")
+	return string(jsonString)
 }
