@@ -7,22 +7,22 @@ import (
 
 // NZB represents an NZB found on the index
 type NZB struct {
-	ID          string
-	Title       string
-	Description string
-	Size        int64
-	AirDate     time.Time
-	PubDate     time.Time
-	NumGrabs    int
-	NumComments int
-	Comments    []Comment
+	ID          string    `json:"id,omitempty"`
+	Title       string    `json:"title,omitempty"`
+	Description string    `json:"description,omitempty"`
+	Size        int64     `json:"size,omitempty"`
+	AirDate     time.Time `json:"air_date,omitempty"`
+	PubDate     time.Time `json:"pub_date,omitempty"`
+	NumGrabs    int       `json:"num_grabs,omitempty"`
+	NumComments int       `json:"num_comments,omitempty"`
+	Comments    []Comment `json:"comments,omitempty"`
 }
 
 // Comment represents a user comment left on an NZB record
 type Comment struct {
-	Title   string
-	Content string
-	PubDate time.Time
+	Title   string    `json:"title,omitempty"`
+	Content string    `json:"content,omitempty"`
+	PubDate time.Time `json:"pub_date,omitempty"`
 }
 
 // JSONString returns a JSON string representation of this NZB
