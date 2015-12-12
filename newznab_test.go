@@ -1,4 +1,4 @@
-package usenetcrawler
+package newznab
 
 import (
 	"crypto/md5"
@@ -9,14 +9,14 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-var apiKey = "YOUR_API_KEY_HERE"
+var apiKey = "e107db4ec078f4635659aef9942cd285"
 
 func TestUsenetCrawlerClient(t *testing.T) {
 	log.SetLevel(log.DebugLevel)
 
 	Convey("I have setup a client", t, func() {
 		So(apiKey, ShouldNotEqual, "YOUR_API_KEY_HERE")
-		client := New(apiKey)
+		client := New("https://usenet-crawler.com/api", apiKey)
 
 		Convey("I can search", func() {
 			results, err := client.Search(CategoryTVSD, 2870, 10, 1)
