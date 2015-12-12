@@ -1,4 +1,4 @@
-package usenetcrawler
+package newznab
 
 import (
 	"crypto/md5"
@@ -16,7 +16,7 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 	Convey("I have setup a client", t, func() {
 		So(apiKey, ShouldNotEqual, "YOUR_API_KEY_HERE")
-		client := New(apiKey)
+		client := New("https://usenet-crawler.com/api", apiKey)
 
 		Convey("I can search", func() {
 			results, err := client.Search(CategoryTVSD, 2870, 10, 1)
