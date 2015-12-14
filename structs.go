@@ -17,6 +17,12 @@ type NZB struct {
 	NumGrabs    int       `json:"num_grabs,omitempty"`
 	NumComments int       `json:"num_comments,omitempty"`
 	Comments    []Comment `json:"comments,omitempty"`
+
+	// Torznab specific stuff
+	Seeders   int
+	Peers     int
+	InfoHash  string
+	IsTorrent bool
 }
 
 // Comment represents a user comment left on an NZB record
@@ -71,14 +77,14 @@ type SearchResponse struct {
 	} `xml:"channel"`
 }
 
-// Item represents a single NZB item in search results.
+// RawNZB represents a single NZB item in search results.
 type RawNZB struct {
-	Title    string `xml:"title",omitempty`
-	Link     string `xml:"link",omitempty`
+	Title    string `xml:"title,omitempty"`
+	Link     string `xml:"link,omitempty"`
 	Category struct {
-		Domain string `xml"domain,attr"`
+		Domain string `xml:"domain,attr"`
 		Value  string `xml:",chardata"`
-	} `xml:"category",omitempty`
+	} `xml:"category,omitempty"`
 
 	GUID struct {
 		GUID        string `xml:",chardata"`
@@ -94,13 +100,13 @@ type RawNZB struct {
 		Value string `xml:"url,chardata"`
 	} `xml:"source,omitempty"`
 
-	Date Time `xml:"pubDate",omitempty`
+	Date Time `xml:"pubDate,omitempty"`
 
 	Enclosure struct {
 		URL    string `xml:"url,attr"`
 		Length string `xml:"length,attr"`
 		Type   string `xml:"type,attr"`
-	} `xml:"enclosure",omitempty`
+	} `xml:"enclosure,omitempty"`
 
 	Attributes []struct {
 		XMLName xml.Name

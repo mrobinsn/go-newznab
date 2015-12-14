@@ -1,6 +1,7 @@
 package newznab
 
 import (
+	"crypto/tls"
 	"encoding/xml"
 	"io/ioutil"
 	"net/http"
@@ -11,7 +12,7 @@ import (
 	log "github.com/Sirupsen/logrus"
 )
 
-var (
+const (
 	// CategoryTVHD is the category for high-definition TV shows
 	CategoryTVHD = 5040
 	// CategoryTVSD is the category for standard-definition TV shows
@@ -22,28 +23,50 @@ var (
 type Client struct {
 	apikey     string
 	apiBaseURL string
+	client     *http.Client
 }
 
 // New returns a new instance of Client
-func New(baseURL string, apikey string) Client {
-	return Client{
+func New(baseURL string, apikey string, insecure bool) Client {
+	ret := Client{
 		apikey:     apikey,
 		apiBaseURL: baseURL,
 	}
+	if insecure {
+		ret.client = &http.Client{
+			Transport: &http.Transport{
+				TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+			}}
+	} else {
+		ret.client = &http.Client{}
+	}
+	return ret
 }
 
-// Search returns NZBs for the given parameters
-func (c Client) Search(category int, tvRageID int, season int, episode int) ([]NZB, error) {
-	var nzbs []NZB
-	log.Debug("usenetcrawler:Client:Search: searching")
-	resp, err := getURL(c.buildURL(url.Values{
-		"t":       []string{"tvsearch"},
+// SearchWithTVRage returns NZBs for the given parameters
+func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode int) ([]NZB, error) {
+	return c.search(url.Values{
 		"rid":     []string{strconv.Itoa(tvRageID)},
 		"cat":     []string{strconv.Itoa(category)},
 		"season":  []string{strconv.Itoa(season)},
 		"episode": []string{strconv.Itoa(episode)},
-		"apikey":  []string{c.apikey},
-	}))
+	})
+}
+
+// SearchWithQuery returns NZBs for the given parameters
+func (c Client) SearchWithQuery(category int, query string) ([]NZB, error) {
+	return c.search(url.Values{
+		"q":   []string{query},
+		"cat": []string{strconv.Itoa(category)},
+	})
+}
+
+func (c Client) search(vals url.Values) ([]NZB, error) {
+	vals.Set("apikey", c.apikey)
+	vals.Set("t", "tvsearch")
+	var nzbs []NZB
+	log.Debug("newznab:Client:Search: searching")
+	resp, err := c.getURL(c.buildURL(vals))
 	if err != nil {
 		return nzbs, err
 	}
@@ -52,7 +75,7 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 	if err != nil {
 		return nil, err
 	}
-	log.WithField("num", len(feed.Channel.NZBs)).Info("usenetcrawler:Client:Search: found NZBs")
+	log.WithField("num", len(feed.Channel.NZBs)).Info("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
 			Title:       gotNZB.Title,
@@ -64,7 +87,7 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 			switch attr.Name {
 			case "tvairdate":
 				if parsedAirDate, err := time.Parse(time.RFC1123Z, attr.Value); err != nil {
-					log.Errorf("usenetcrawler:Client:Search: failed to parse date: %v: %v", attr.Value, err)
+					log.Errorf("newznab:Client:Search: failed to parse date: %v: %v", attr.Value, err)
 				} else {
 					nzb.AirDate = parsedAirDate
 				}
@@ -79,6 +102,17 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 			case "comments":
 				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
 				nzb.NumComments = int(parsedInt)
+			case "seeders":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.Seeders = int(parsedInt)
+				nzb.IsTorrent = true
+			case "peers":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.Peers = int(parsedInt)
+				nzb.IsTorrent = true
+			case "infohash":
+				nzb.InfoHash = attr.Value
+				nzb.IsTorrent = true
 			}
 		}
 		nzbs = append(nzbs, nzb)
@@ -88,8 +122,8 @@ func (c Client) Search(category int, tvRageID int, season int, episode int) ([]N
 
 // PopulateComments fills in the Comments for the given NZB
 func (c Client) PopulateComments(nzb *NZB) error {
-	log.Debug("usenetcrawler:Client:PopulateComments: getting comments")
-	data, err := getURL(c.buildURL(url.Values{
+	log.Debug("newznab:Client:PopulateComments: getting comments")
+	data, err := c.getURL(c.buildURL(url.Values{
 		"t":      []string{"comments"},
 		"id":     []string{nzb.ID},
 		"apikey": []string{c.apikey},
@@ -112,7 +146,7 @@ func (c Client) PopulateComments(nzb *NZB) error {
 			log.WithFields(log.Fields{
 				"pub_date": rawComment.PubDate,
 				"err":      err,
-			}).Error("usenetcrawler:Client:PopulateComments: failed to parse date")
+			}).Error("newznab:Client:PopulateComments: failed to parse date")
 		} else {
 			comment.PubDate = parsedPubDate
 		}
@@ -132,12 +166,12 @@ func (c Client) DownloadURL(nzb NZB) string {
 
 // Download returns the bytes of the actual NZB file for the given NZB
 func (c Client) Download(nzb NZB) ([]byte, error) {
-	return getURL(c.DownloadURL(nzb))
+	return c.getURL(c.DownloadURL(nzb))
 }
 
-func getURL(url string) ([]byte, error) {
-	log.WithField("url", url).Debug("usenetcrawler:Client:getURL: getting url")
-	res, err := http.Get(url)
+func (c Client) getURL(url string) ([]byte, error) {
+	log.WithField("url", url).Debug("newznab:Client:getURL: getting url")
+	res, err := c.client.Get(url)
 	if err != nil {
 		return nil, err
 	}
@@ -149,7 +183,7 @@ func getURL(url string) ([]byte, error) {
 		return nil, err
 	}
 
-	log.WithField("num_bytes", len(data)).Debug("usenetcrawler:Client:getURL: retrieved")
+	log.WithField("num_bytes", len(data)).Debug("newznab:Client:getURL: retrieved")
 
 	return data, nil
 }
