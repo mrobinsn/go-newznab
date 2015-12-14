@@ -19,10 +19,11 @@ type NZB struct {
 	Comments    []Comment `json:"comments,omitempty"`
 
 	// Torznab specific stuff
-	Seeders   int
-	Peers     int
-	InfoHash  string
-	IsTorrent bool
+	Seeders     int    `json:"seeders,omitempty"`
+	Peers       int    `json:"peers,omitempty"`
+	InfoHash    string `json:"infohash,omitempty"`
+	DownloadURL string `json:"download_url,omitempty"`
+	IsTorrent   bool   `json:"is_torrent,omitempty"`
 }
 
 // Comment represents a user comment left on an NZB record
