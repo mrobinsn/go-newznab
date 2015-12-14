@@ -81,6 +81,7 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			Title:       gotNZB.Title,
 			Description: gotNZB.Description,
 			PubDate:     gotNZB.Date.Add(0),
+			DownloadURL: gotNZB.Enclosure.URL,
 		}
 
 		for _, attr := range gotNZB.Attributes {
@@ -155,8 +156,8 @@ func (c Client) PopulateComments(nzb *NZB) error {
 	return nil
 }
 
-// DownloadURL returns a URL to download the NZB from
-func (c Client) DownloadURL(nzb NZB) string {
+// NZBDownloadURL returns a URL to download the NZB from
+func (c Client) NZBDownloadURL(nzb NZB) string {
 	return c.buildURL(url.Values{
 		"t":      []string{"get"},
 		"id":     []string{nzb.ID},
@@ -164,9 +165,9 @@ func (c Client) DownloadURL(nzb NZB) string {
 	})
 }
 
-// Download returns the bytes of the actual NZB file for the given NZB
-func (c Client) Download(nzb NZB) ([]byte, error) {
-	return c.getURL(c.DownloadURL(nzb))
+// DownloadNZB returns the bytes of the actual NZB file for the given NZB
+func (c Client) DownloadNZB(nzb NZB) ([]byte, error) {
+	return c.getURL(c.NZBDownloadURL(nzb))
 }
 
 func (c Client) getURL(url string) ([]byte, error) {

@@ -57,12 +57,12 @@ func TestUsenetCrawlerClient(t *testing.T) {
 				So(len(nzb.Comments), ShouldBeGreaterThan, 0)
 
 				Convey("I can get the download url", func() {
-					url := client.DownloadURL(results[0])
+					url := client.NZBDownloadURL(results[0])
 					So(len(url), ShouldBeGreaterThan, 0)
 					log.Infof("URL: %s", url)
 
 					Convey("I can download the NZB", func() {
-						bytes, err := client.Download(results[0])
+						bytes, err := client.DownloadNZB(results[0])
 						So(err, ShouldBeNil)
 
 						md5Sum := md5.Sum(bytes)
