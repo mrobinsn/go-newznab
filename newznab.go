@@ -78,10 +78,12 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 	log.WithField("num", len(feed.Channel.NZBs)).Info("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
-			Title:       gotNZB.Title,
-			Description: gotNZB.Description,
-			PubDate:     gotNZB.Date.Add(0),
-			DownloadURL: gotNZB.Enclosure.URL,
+			Title:          gotNZB.Title,
+			Description:    gotNZB.Description,
+			PubDate:        gotNZB.Date.Add(0),
+			DownloadURL:    gotNZB.Enclosure.URL,
+			SourceEndpoint: c.apiBaseURL,
+			SourceAPIKey:   c.apikey,
 		}
 
 		for _, attr := range gotNZB.Attributes {
