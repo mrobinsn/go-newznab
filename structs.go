@@ -85,6 +85,7 @@ type SearchResponse struct {
 type RawNZB struct {
 	Title    string `xml:"title,omitempty"`
 	Link     string `xml:"link,omitempty"`
+	Size     int64  `xml:"size,omitempty"`
 	Category struct {
 		Domain string `xml:"domain,attr"`
 		Value  string `xml:",chardata"`
