@@ -46,10 +46,11 @@ func New(baseURL string, apikey string, insecure bool) Client {
 // SearchWithTVRage returns NZBs for the given parameters
 func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode int) ([]NZB, error) {
 	return c.search(url.Values{
-		"rid":     []string{strconv.Itoa(tvRageID)},
-		"cat":     []string{strconv.Itoa(category)},
-		"season":  []string{strconv.Itoa(season)},
-		"episode": []string{strconv.Itoa(episode)},
+		"rid":      []string{strconv.Itoa(tvRageID)},
+		"cat":      []string{strconv.Itoa(category)},
+		"season":   []string{strconv.Itoa(season)},
+		"episode":  []string{strconv.Itoa(episode)},
+		"extended": []string{"1"},
 	})
 }
 
@@ -78,10 +79,12 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 	log.WithField("num", len(feed.Channel.NZBs)).Info("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
-			Title:       gotNZB.Title,
-			Description: gotNZB.Description,
-			PubDate:     gotNZB.Date.Add(0),
-			DownloadURL: gotNZB.Enclosure.URL,
+			Title:          gotNZB.Title,
+			Description:    gotNZB.Description,
+			PubDate:        gotNZB.Date.Add(0),
+			DownloadURL:    gotNZB.Enclosure.URL,
+			SourceEndpoint: c.apiBaseURL,
+			SourceAPIKey:   c.apikey,
 		}
 
 		for _, attr := range gotNZB.Attributes {
@@ -114,7 +117,15 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			case "infohash":
 				nzb.InfoHash = attr.Value
 				nzb.IsTorrent = true
+			default:
+				log.WithFields(log.Fields{
+					"name":  attr.Name,
+					"value": attr.Value,
+				}).Debug("encounted unknown attribute")
 			}
+		}
+		if nzb.Size == 0 {
+			nzb.Size = gotNZB.Size
 		}
 		nzbs = append(nzbs, nzb)
 	}

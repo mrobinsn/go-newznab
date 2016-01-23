@@ -18,6 +18,9 @@ type NZB struct {
 	NumComments int       `json:"num_comments,omitempty"`
 	Comments    []Comment `json:"comments,omitempty"`
 
+	SourceEndpoint string `json:"source_endpoint"`
+	SourceAPIKey   string `json:"source_apikey"`
+
 	// Torznab specific stuff
 	Seeders     int    `json:"seeders,omitempty"`
 	Peers       int    `json:"peers,omitempty"`
@@ -82,6 +85,7 @@ type SearchResponse struct {
 type RawNZB struct {
 	Title    string `xml:"title,omitempty"`
 	Link     string `xml:"link,omitempty"`
+	Size     int64  `xml:"size,omitempty"`
 	Category struct {
 		Domain string `xml:"domain,attr"`
 		Value  string `xml:",chardata"`
