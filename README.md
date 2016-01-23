@@ -18,7 +18,7 @@ To use it in your application, import `github.com/tehjojo/go-newznab/newznab`
 
 ## Library Usage
 ```
-client := newznab.New("", "", false)
+client := newznab.New("http://my-usenet-indexer/api", "my-api-key", false)
 results, _ := client.SearchWithTVRage(newznab.CategoryTVHD, 35048, 3, 1)
 ```
 
