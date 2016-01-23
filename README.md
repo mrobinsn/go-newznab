@@ -1,6 +1,6 @@
 # go-newznab
 
-newznab XML API client for Go (golang)
+> newznab XML API client for Go (golang)
 
 ## Documentation
 https://godoc.org/github.com/tehjojo/go-newznab/newznab
