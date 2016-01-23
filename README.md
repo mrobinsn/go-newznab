@@ -1,6 +1,26 @@
 # go-newznab
-Go library that provides a client for the `newznab` XML api
 
-Currently only TV Search, comment population, and NZB download are supported.
+newznab XML API client for Go (golang)
 
+## Documentation
+https://godoc.org/github.com/tehjojo/go-newznab/newznab
+
+## Features
+- Search for episode with TVRage ID
+- Search for files with category and query
+- Get comments for a NZB
+- Get NZB download URL
+- Download NZB
+
+## Installation
+To install the package run `go get github.com/tehjojo/go-newznab`
+To use it in your application, import `github.com/tehjojo/go-newznab/newznab`
+
+## Library Usage
+```
+client := newznab.New("", "", false)
+results, _ := client.SearchWithTVRage(newznab.CategoryTVHD, 35048, 3, 1)
+```
+
+## Contributing
 Pull requests welcome.
