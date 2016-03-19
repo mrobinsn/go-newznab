@@ -40,8 +40,11 @@ func TestUsenetCrawlerClient(t *testing.T) {
 		}
 		if err != nil {
 			log.Error(err)
+			w.WriteHeader(http.StatusNotFound)
+			w.Write([]byte("File not found"))
+		} else {
+			w.Write(f)
 		}
-		w.Write(f)
 	}))
 
 	defer ts.Close()
@@ -61,15 +64,24 @@ func TestUsenetCrawlerClient(t *testing.T) {
 	})
 
 	Convey("I have setup a nzb client", t, func() {
-		client := New(ts.URL+"/api", apiKey, true)
+		client := New(ts.URL+"/api", apiKey, false)
+
+		Convey("Handle errors", func() {
+			Convey("Return an error for an invalid search", func() {
+				_, err := client.SearchWithTVDB(CategoryTVSD, 1234, 9, 2)
+				So(err, ShouldNotBeNil)
+			})
+		})
 
 		Convey("I can get TV show information", func() {
-			Convey("I can search using tvdb id", func() {
+
+			Convey("I can search using TheTVDB id", func() {
 				results, err := client.SearchWithTVDB(CategoryTVSD, 75682, 10, 1)
 
 				So(err, ShouldBeNil)
 				So(len(results), ShouldBeGreaterThan, 0)
 			})
+
 			Convey("I can search using tvrage id", func() {
 				results, err := client.SearchWithTVRage(CategoryTVSD, 2870, 10, 1)
 
@@ -110,6 +122,42 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 							So(len(bytes), ShouldBeGreaterThan, 0)
 						})
+					})
+				})
+			})
+		})
+		Convey("I can get movie information", func() {
+
+			Convey("I can search using an IMDB id", func() {
+				results, err := client.SearchWithIMDB(CategoryMovieHD, "0364569")
+
+				So(err, ShouldBeNil)
+				So(len(results), ShouldBeGreaterThan, 0)
+				Convey("Get movie specific fields from results", func() {
+					Convey("IMDB ID", func() {
+						imdbAttr := results[0].IMDBID
+
+						So(imdbAttr, ShouldEqual, "0364569")
+					})
+					Convey("IMDB Title", func() {
+						imdbAttr := results[0].IMDBTitle
+
+						So(imdbAttr, ShouldEqual, "Oldboy")
+					})
+					Convey("IMDB Year", func() {
+						imdbAttr := results[0].IMDBYear
+
+						So(imdbAttr, ShouldEqual, 2003)
+					})
+					Convey("IMDB Score", func() {
+						imdbAttr := results[0].IMDBScore
+
+						So(imdbAttr, ShouldEqual, 8.4)
+					})
+					Convey("IMDB Cover URL", func() {
+						imdbAttr := results[0].CoverURL
+
+						So(imdbAttr, ShouldEqual, "https://dognzb.cr/content/covers/movies/thumbs/364569.jpg")
 					})
 				})
 			})

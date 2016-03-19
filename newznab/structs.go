@@ -22,14 +22,23 @@ type NZB struct {
 	SourceAPIKey   string `json:"source_apikey"`
 
 	Category []string `json:"category,omitempty"`
-	Genre    string   `json:"genre,omitempty"`
-	TVDBID   string   `json:"genre,omitempty"`
-	TVRageID string   `json:"genre,omitempty"`
 	Info     string   `json:"info,omitempty"`
-	Season   string   `json:"season,omitempty"`
-	Episode  string   `json:"episode,omitempty"`
-	TVTitle  string   `json:"tvtitle,omitempty"`
-	Rating   int      `json:"tvtitle,omitempty"`
+	Genre    string   `json:"genre,omitempty"`
+
+	// TV Specific stuff
+	TVDBID   string `json:"genre,omitempty"`
+	TVRageID string `json:"genre,omitempty"`
+	Season   string `json:"season,omitempty"`
+	Episode  string `json:"episode,omitempty"`
+	TVTitle  string `json:"tvtitle,omitempty"`
+	Rating   int    `json:"tvtitle,omitempty"`
+
+	// Movie Specific stuff
+	IMDBID    string  `json:"imdb,omitempty"`
+	IMDBTitle string  `json:"imdbtitle,omitempty"`
+	IMDBYear  int     `json:"imdbyear,omitempty"`
+	IMDBScore float32 `json:"imdbscore,omitempty"`
+	CoverURL  string  `json:"coverurl,omitempty"`
 
 	// Torznab specific stuff
 	Seeders     int    `json:"seeders,omitempty"`

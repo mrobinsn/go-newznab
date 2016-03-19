@@ -161,6 +161,18 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			case "rating":
 				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
 				nzb.Rating = int(parsedInt)
+			case "imdb":
+				nzb.IMDBID = attr.Value
+			case "imdbtitle":
+				nzb.IMDBTitle = attr.Value
+			case "imdbyear":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.IMDBYear = int(parsedInt)
+			case "imdbscore":
+				parsedFloat, _ := strconv.ParseFloat(attr.Value, 32)
+				nzb.IMDBScore = float32(parsedFloat)
+			case "coverurl":
+				nzb.CoverURL = attr.Value
 			default:
 				log.WithFields(log.Fields{
 					"name":  attr.Name,
