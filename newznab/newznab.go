@@ -58,6 +58,17 @@ func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode
 	})
 }
 
+// SearchWithTVDB returns NZBs for the given parameters
+func (c Client) SearchWithTVDB(category int, tvDBID int, season int, episode int) ([]NZB, error) {
+	return c.search(url.Values{
+		"tvdbid":  []string{strconv.Itoa(tvDBID)},
+		"cat":     []string{strconv.Itoa(category)},
+		"season":  []string{strconv.Itoa(season)},
+		"episode": []string{strconv.Itoa(episode)},
+		"t":       []string{"tvsearch"},
+	})
+}
+
 // SearchWithIMDB returns NZBs for the given parameters
 func (c Client) SearchWithIMDB(category int, imdbID string) ([]NZB, error) {
 	return c.search(url.Values{
@@ -131,6 +142,25 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			case "infohash":
 				nzb.InfoHash = attr.Value
 				nzb.IsTorrent = true
+			case "category":
+				nzb.Category = append(nzb.Category, attr.Value)
+			case "genre":
+				nzb.Genre = attr.Value
+			case "tvdbid":
+				nzb.TVDBID = attr.Value
+			case "rageid":
+				nzb.TVRageID = attr.Value
+			case "info":
+				nzb.Info = attr.Value
+			case "season":
+				nzb.Season = attr.Value
+			case "episode":
+				nzb.Episode = attr.Value
+			case "tvtitle":
+				nzb.TVTitle = attr.Value
+			case "rating":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.Rating = int(parsedInt)
 			default:
 				log.WithFields(log.Fields{
 					"name":  attr.Name,

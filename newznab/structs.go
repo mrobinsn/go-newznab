@@ -21,6 +21,16 @@ type NZB struct {
 	SourceEndpoint string `json:"source_endpoint"`
 	SourceAPIKey   string `json:"source_apikey"`
 
+	Category []string `json:"category,omitempty"`
+	Genre    string   `json:"genre,omitempty"`
+	TVDBID   string   `json:"genre,omitempty"`
+	TVRageID string   `json:"genre,omitempty"`
+	Info     string   `json:"info,omitempty"`
+	Season   string   `json:"season,omitempty"`
+	Episode  string   `json:"episode,omitempty"`
+	TVTitle  string   `json:"tvtitle,omitempty"`
+	Rating   int      `json:"tvtitle,omitempty"`
+
 	// Torznab specific stuff
 	Seeders     int    `json:"seeders,omitempty"`
 	Peers       int    `json:"peers,omitempty"`
