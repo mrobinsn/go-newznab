@@ -18,7 +18,7 @@ func TestUsenetCrawlerClient(t *testing.T) {
 		client := New("path to your jackett api", apiKey, true)
 
 		Convey("I can search using simple query", func() {
-			results, err := client.SearchWithQuery(CategoryTVHD, "Supernatural S11E01")
+			results, err := client.SearchWithQuery(CategoryTVHD, "Supernatural S11E01", "tvshows")
 			for _, result := range results {
 				log.Info(result.JSONString())
 			}

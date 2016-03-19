@@ -17,6 +17,10 @@ const (
 	CategoryTVHD = 5040
 	// CategoryTVSD is the category for standard-definition TV shows
 	CategoryTVSD = 5030
+	// CategoryMovieHD is the category for high-definition TV shows
+	CategoryMovieHD = 2040
+	// CategoryMovieSD is the category for standard-definition TV shows
+	CategoryMovieSD = 2030
 )
 
 // Client is a type for interacting with a newznab or torznab api
@@ -46,25 +50,35 @@ func New(baseURL string, apikey string, insecure bool) Client {
 // SearchWithTVRage returns NZBs for the given parameters
 func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode int) ([]NZB, error) {
 	return c.search(url.Values{
-		"rid":      []string{strconv.Itoa(tvRageID)},
-		"cat":      []string{strconv.Itoa(category)},
-		"season":   []string{strconv.Itoa(season)},
-		"episode":  []string{strconv.Itoa(episode)},
-		"extended": []string{"1"},
+		"rid":     []string{strconv.Itoa(tvRageID)},
+		"cat":     []string{strconv.Itoa(category)},
+		"season":  []string{strconv.Itoa(season)},
+		"episode": []string{strconv.Itoa(episode)},
+		"t":       []string{"tvsearch"},
+	})
+}
+
+// SearchWithIMDB returns NZBs for the given parameters
+func (c Client) SearchWithIMDB(category int, imdbID string) ([]NZB, error) {
+	return c.search(url.Values{
+		"imdbid": []string{imdbID},
+		"cat":    []string{strconv.Itoa(category)},
+		"t":      []string{"movie"},
 	})
 }
 
 // SearchWithQuery returns NZBs for the given parameters
-func (c Client) SearchWithQuery(category int, query string) ([]NZB, error) {
+func (c Client) SearchWithQuery(category int, query string, searchType string) ([]NZB, error) {
 	return c.search(url.Values{
 		"q":   []string{query},
 		"cat": []string{strconv.Itoa(category)},
+		"t":   []string{searchType},
 	})
 }
 
 func (c Client) search(vals url.Values) ([]NZB, error) {
 	vals.Set("apikey", c.apikey)
-	vals.Set("t", "tvsearch")
+	//vals.Set("t", "tvsearch")
 	var nzbs []NZB
 	log.Debug("newznab:Client:Search: searching")
 	resp, err := c.getURL(c.buildURL(vals))
