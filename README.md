@@ -6,8 +6,8 @@
 https://godoc.org/github.com/tehjojo/go-newznab/newznab
 
 ## Features
-- Search for episode with TVRage ID
-- Search for files with category and query
+- TV and Movie search
+- Search for files with category(s) and query
 - Get comments for a NZB
 - Get NZB download URL
 - Download NZB
