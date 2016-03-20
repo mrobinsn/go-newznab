@@ -12,15 +12,37 @@ import (
 	log "github.com/Sirupsen/logrus"
 )
 
+// Various constants for categories
 const (
-	// CategoryTVHD is the category for high-definition TV shows
-	CategoryTVHD = 5040
-	// CategoryTVSD is the category for standard-definition TV shows
+	// TV Categories
+	// CategoryTVAll is for all shows
+	CategoryTVAll = 5000
+	// CategoryTVForeign is for foreign shows
+	CategoryTVForeign = 5020
+	// CategoryTVSD is for standard-definition shows
 	CategoryTVSD = 5030
-	// CategoryMovieHD is the category for high-definition TV shows
-	CategoryMovieHD = 2040
-	// CategoryMovieSD is the category for standard-definition TV shows
+	// CategoryTVHD is for high-definition shows
+	CategoryTVHD = 5040
+	// CategoryTVOther is for other shows
+	CategoryTVOther = 5050
+	// CategoryTVSport is for sports shows
+	CategoryTVSport = 5060
+
+	// Movie categories
+	// CategoryMovieAll is for all movies
+	CategoryMovieAll = 2000
+	// CategoryMovieForeign is for foreign movies
+	CategoryMovieForeign = 2010
+	// CategoryMovieOther is for other movies
+	CategoryMovieOther = 2020
+	// CategoryMovieSD is for standard-definition movies
 	CategoryMovieSD = 2030
+	// CategoryMovieHD is for high-definition movies
+	CategoryMovieHD = 2040
+	// CategoryMovieBluRay is for blu-ray movies
+	CategoryMovieBluRay = 2050
+	// CategoryMovie3D is for 3-D movies
+	CategoryMovie3D = 2060
 )
 
 // Client is a type for interacting with a newznab or torznab api
