@@ -7,16 +7,43 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"strings"
 	"time"
 
 	log "github.com/Sirupsen/logrus"
 )
 
+// Various constants for categories
 const (
-	// CategoryTVHD is the category for high-definition TV shows
-	CategoryTVHD = 5040
-	// CategoryTVSD is the category for standard-definition TV shows
+	// TV Categories
+	// CategoryTVAll is for all shows
+	CategoryTVAll = 5000
+	// CategoryTVForeign is for foreign shows
+	CategoryTVForeign = 5020
+	// CategoryTVSD is for standard-definition shows
 	CategoryTVSD = 5030
+	// CategoryTVHD is for high-definition shows
+	CategoryTVHD = 5040
+	// CategoryTVOther is for other shows
+	CategoryTVOther = 5050
+	// CategoryTVSport is for sports shows
+	CategoryTVSport = 5060
+
+	// Movie categories
+	// CategoryMovieAll is for all movies
+	CategoryMovieAll = 2000
+	// CategoryMovieForeign is for foreign movies
+	CategoryMovieForeign = 2010
+	// CategoryMovieOther is for other movies
+	CategoryMovieOther = 2020
+	// CategoryMovieSD is for standard-definition movies
+	CategoryMovieSD = 2030
+	// CategoryMovieHD is for high-definition movies
+	CategoryMovieHD = 2040
+	// CategoryMovieBluRay is for blu-ray movies
+	CategoryMovieBluRay = 2050
+	// CategoryMovie3D is for 3-D movies
+	CategoryMovie3D = 2060
 )
 
 // Client is a type for interacting with a newznab or torznab api
@@ -44,27 +71,56 @@ func New(baseURL string, apikey string, insecure bool) Client {
 }
 
 // SearchWithTVRage returns NZBs for the given parameters
-func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode int) ([]NZB, error) {
+func (c Client) SearchWithTVRage(categories []int, tvRageID int, season int, episode int) ([]NZB, error) {
 	return c.search(url.Values{
-		"rid":      []string{strconv.Itoa(tvRageID)},
-		"cat":      []string{strconv.Itoa(category)},
-		"season":   []string{strconv.Itoa(season)},
-		"episode":  []string{strconv.Itoa(episode)},
-		"extended": []string{"1"},
+		"rid":     []string{strconv.Itoa(tvRageID)},
+		"cat":     c.splitCats(categories),
+		"season":  []string{strconv.Itoa(season)},
+		"episode": []string{strconv.Itoa(episode)},
+		"t":       []string{"tvsearch"},
+	})
+}
+
+// SearchWithTVDB returns NZBs for the given parameters
+func (c Client) SearchWithTVDB(categories []int, tvDBID int, season int, episode int) ([]NZB, error) {
+	return c.search(url.Values{
+		"tvdbid":  []string{strconv.Itoa(tvDBID)},
+		"cat":     c.splitCats(categories),
+		"season":  []string{strconv.Itoa(season)},
+		"episode": []string{strconv.Itoa(episode)},
+		"t":       []string{"tvsearch"},
+	})
+}
+
+// SearchWithIMDB returns NZBs for the given parameters
+func (c Client) SearchWithIMDB(categories []int, imdbID string) ([]NZB, error) {
+	return c.search(url.Values{
+		"imdbid": []string{imdbID},
+		"cat":    c.splitCats(categories),
+		"t":      []string{"movie"},
 	})
 }
 
 // SearchWithQuery returns NZBs for the given parameters
-func (c Client) SearchWithQuery(category int, query string) ([]NZB, error) {
+func (c Client) SearchWithQuery(categories []int, query string, searchType string) ([]NZB, error) {
 	return c.search(url.Values{
 		"q":   []string{query},
-		"cat": []string{strconv.Itoa(category)},
+		"cat": c.splitCats(categories),
+		"t":   []string{searchType},
 	})
 }
 
+func (c Client) splitCats(cats []int) []string {
+	var categories, catsOut []string
+	for _, v := range cats {
+		categories = append(categories, strconv.Itoa(v))
+	}
+	catsOut = append(catsOut, strings.Join(categories, ","))
+	return catsOut
+}
 func (c Client) search(vals url.Values) ([]NZB, error) {
 	vals.Set("apikey", c.apikey)
-	vals.Set("t", "tvsearch")
+	//vals.Set("t", "tvsearch")
 	var nzbs []NZB
 	log.Debug("newznab:Client:Search: searching")
 	resp, err := c.getURL(c.buildURL(vals))
@@ -117,6 +173,37 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			case "infohash":
 				nzb.InfoHash = attr.Value
 				nzb.IsTorrent = true
+			case "category":
+				nzb.Category = append(nzb.Category, attr.Value)
+			case "genre":
+				nzb.Genre = attr.Value
+			case "tvdbid":
+				nzb.TVDBID = attr.Value
+			case "rageid":
+				nzb.TVRageID = attr.Value
+			case "info":
+				nzb.Info = attr.Value
+			case "season":
+				nzb.Season = attr.Value
+			case "episode":
+				nzb.Episode = attr.Value
+			case "tvtitle":
+				nzb.TVTitle = attr.Value
+			case "rating":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.Rating = int(parsedInt)
+			case "imdb":
+				nzb.IMDBID = attr.Value
+			case "imdbtitle":
+				nzb.IMDBTitle = attr.Value
+			case "imdbyear":
+				parsedInt, _ := strconv.ParseInt(attr.Value, 0, 32)
+				nzb.IMDBYear = int(parsedInt)
+			case "imdbscore":
+				parsedFloat, _ := strconv.ParseFloat(attr.Value, 32)
+				nzb.IMDBScore = float32(parsedFloat)
+			case "coverurl":
+				nzb.CoverURL = attr.Value
 			default:
 				log.WithFields(log.Fields{
 					"name":  attr.Name,

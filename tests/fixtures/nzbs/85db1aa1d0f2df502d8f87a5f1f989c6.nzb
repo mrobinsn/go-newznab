@@ -1,0 +1,1006 @@
+HTTP/1.1 302 Found
+Date: Sat, 19 Mar 2016 17:32:47 GMT
+Server: Apache
+Expires: {ts '2016-03-19 11:32:47'}
+Pragma: no-cache
+location: https://dognzb.cr/fetch/85db1aa1d0f2df502d8f87a5f1f989c6/d097584317824393f71b88a472575e7a
+Cache-Control: no-cache
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+Content-Type: text/html;charset=UTF-8
+
+HTTP/1.1 200 OK
+Date: Sat, 19 Mar 2016 17:32:47 GMT
+Server: Apache
+Set-Cookie: CFID=274126421;path=/;HTTPOnly
+Set-Cookie: CFTOKEN=53db20475dfab3db-9F5D90F2-EEF1-2C4C-E2A759B5044789F2;path=/;HTTPOnly
+Expires: {ts '2016-03-19 11:32:47'}
+Pragma: no-cache
+Content-Disposition: attachment; filename="Bones.S10E22.DVDRip.X264-REWARD.nzb"
+X-DNZB-ProperName: Bones
+X-DNZB-EpisodeName: The Next in the Last
+X-DNZB-EpisodeNumber: S10E22
+X-DNZB-Category: TV > SD
+X-DNZB-Details: https://dognzb.cr/details/85db1aa1d0f2df502d8f87a5f1f989c6
+X-DNZB-Failure: https://dognzb.cr/fail/85db1aa1d0f2df502d8f87a5f1f989c6/d097584317824393f71b88a472575e7a
+X-DNZB-MoreInfo: http://www.imdb.com/title/tt0460627/
+X-DNZB-NFO: https://dognzb.cr/nfo/85db1aa1d0f2df502d8f87a5f1f989c6
+Content-Length: 69271
+Vary: Accept-Encoding
+Content-Type: application/x-nzb;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nzb PUBLIC "-//newzBin//DTD NZB 1.1//EN" "http://www.newzbin.com/DTD/nzb/nzb-1.1.dtd">
+<nzb xmlns="http://www.newzbin.com/DTD/2003/nzb">
+
+<head>
+ <meta type="category">TV &gt; SD</meta>
+ <meta type="name">Bones.S10E22.DVDRip.X264-REWARD</meta>
+ <meta type="propername">Bones</meta>
+</head>
+
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[01/49] - &quot;bones.s10e22.dvdrip.x264-reward.proof.jpg&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="87939" number="1">1443761572.12296.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[02/49] - &quot;bones.s10e22.dvdrip.x264-reward.proof.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="1449" number="1">1443761572.12420.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[03/49] - &quot;bones.s10e22.dvdrip.x264-reward.proof.vol0+1.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="393013" number="1">1443761572.12566.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[04/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.mkv&quot; yEnc (1/13)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793119" number="1">1443761572.12895.1@reader.easyusenet.nl</segment>
+  <segment bytes="793267" number="2">1443761572.13632.2@reader.easyusenet.nl</segment>
+  <segment bytes="793152" number="3">1443761572.14176.3@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="4">1443761572.14690.4@reader.easyusenet.nl</segment>
+  <segment bytes="793167" number="5">1443761572.15219.5@reader.easyusenet.nl</segment>
+  <segment bytes="793129" number="6">1443761572.15723.6@reader.easyusenet.nl</segment>
+  <segment bytes="793042" number="7">1443761572.16245.7@reader.easyusenet.nl</segment>
+  <segment bytes="793272" number="8">1443761572.16764.8@reader.easyusenet.nl</segment>
+  <segment bytes="793279" number="9">1443761572.17288.9@reader.easyusenet.nl</segment>
+  <segment bytes="792970" number="10">1443761572.17804.10@reader.easyusenet.nl</segment>
+  <segment bytes="793269" number="11">1443761572.18360.11@reader.easyusenet.nl</segment>
+  <segment bytes="793353" number="12">1443761572.18899.12@reader.easyusenet.nl</segment>
+  <segment bytes="696393" number="13">1443761572.19406.13@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[05/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="1941" number="1">1443761572.19814.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[06/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.vol00+1.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="398103" number="1">1443761572.19829.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[07/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.vol01+2.par2&quot; yEnc (1/2)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793183" number="1">1443761572.20049.1@reader.easyusenet.nl</segment>
+  <segment bytes="2991" number="2">1443761572.20478.2@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[08/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.vol03+4.par2&quot; yEnc (1/3)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793265" number="1">1443761572.22619.1@reader.easyusenet.nl</segment>
+  <segment bytes="793348" number="2">1443761572.24506.2@reader.easyusenet.nl</segment>
+  <segment bytes="4017" number="3">1443761572.25160.3@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[09/49] - &quot;bones.s10e22.dvdrip.x264-reward.sample.vol07+6.par2&quot; yEnc (1/4)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793153" number="1">1443761572.29202.1@reader.easyusenet.nl</segment>
+  <segment bytes="793040" number="2">1443761572.32307.2@reader.easyusenet.nl</segment>
+  <segment bytes="793213" number="3">1443761572.59532.3@reader.easyusenet.nl</segment>
+  <segment bytes="4163" number="4">1443761572.71152.4@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761590" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[1/1] - &quot;Bones.S10E22.DVDRip.X264-REWARD.nzb&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="74209" number="1">1443761590.15417.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761572" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[10/49] - &quot;bones.s10e22.dvdrip.x264-reward.subs.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="1862" number="1">1443761572.76132.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[11/49] - &quot;bones.s10e22.dvdrip.x264-reward.subs.rar&quot; yEnc (1/5)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793207" number="1">1443761572.81225.1@reader.easyusenet.nl</segment>
+  <segment bytes="793019" number="2">1443761572.99440.2@reader.easyusenet.nl</segment>
+  <segment bytes="793122" number="3">1443761572.99844.3@reader.easyusenet.nl</segment>
+  <segment bytes="790843" number="4">1443761573.02215.4@reader.easyusenet.nl</segment>
+  <segment bytes="6917" number="5">1443761573.02647.5@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[12/49] - &quot;bones.s10e22.dvdrip.x264-reward.subs.sfv&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="1007" number="1">1443761573.05214.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[13/49] - &quot;bones.s10e22.dvdrip.x264-reward.subs.vol0+1.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="398038" number="1">1443761573.05244.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[14/49] - &quot;bones.s10e22.dvdrip.x264-reward.nfo&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="1903" number="1">1443761573.06481.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761573" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[15/49] - &quot;bones.s10e22.dvdrip.x264-reward.par2&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="19037" number="1">1443761573.07647.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761574" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[16/49] - &quot;bones.s10e22.dvdrip.x264-reward.r00&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793205" number="1">1443761573.07691.1@reader.easyusenet.nl</segment>
+  <segment bytes="793012" number="2">1443761573.08109.2@reader.easyusenet.nl</segment>
+  <segment bytes="793198" number="3">1443761573.08536.3@reader.easyusenet.nl</segment>
+  <segment bytes="793243" number="4">1443761573.08947.4@reader.easyusenet.nl</segment>
+  <segment bytes="793302" number="5">1443761573.10273.5@reader.easyusenet.nl</segment>
+  <segment bytes="793430" number="6">1443761573.10720.6@reader.easyusenet.nl</segment>
+  <segment bytes="792972" number="7">1443761573.12010.7@reader.easyusenet.nl</segment>
+  <segment bytes="793028" number="8">1443761573.12479.8@reader.easyusenet.nl</segment>
+  <segment bytes="792983" number="9">1443761573.12914.9@reader.easyusenet.nl</segment>
+  <segment bytes="793257" number="10">1443761573.16178.10@reader.easyusenet.nl</segment>
+  <segment bytes="793087" number="11">1443761573.18465.11@reader.easyusenet.nl</segment>
+  <segment bytes="793273" number="12">1443761573.25609.12@reader.easyusenet.nl</segment>
+  <segment bytes="793307" number="13">1443761573.27076.13@reader.easyusenet.nl</segment>
+  <segment bytes="793142" number="14">1443761573.33871.14@reader.easyusenet.nl</segment>
+  <segment bytes="793244" number="15">1443761573.44493.15@reader.easyusenet.nl</segment>
+  <segment bytes="793353" number="16">1443761573.50859.16@reader.easyusenet.nl</segment>
+  <segment bytes="793143" number="17">1443761573.78901.17@reader.easyusenet.nl</segment>
+  <segment bytes="793466" number="18">1443761573.80726.18@reader.easyusenet.nl</segment>
+  <segment bytes="793167" number="19">1443761573.84424.19@reader.easyusenet.nl</segment>
+  <segment bytes="422046" number="20">1443761573.90338.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761575" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[17/49] - &quot;bones.s10e22.dvdrip.x264-reward.r01&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793051" number="1">1443761573.93763.1@reader.easyusenet.nl</segment>
+  <segment bytes="793359" number="2">1443761573.94812.2@reader.easyusenet.nl</segment>
+  <segment bytes="793206" number="3">1443761574.00234.3@reader.easyusenet.nl</segment>
+  <segment bytes="793087" number="4">1443761574.02114.4@reader.easyusenet.nl</segment>
+  <segment bytes="793228" number="5">1443761574.02696.5@reader.easyusenet.nl</segment>
+  <segment bytes="793201" number="6">1443761574.09918.6@reader.easyusenet.nl</segment>
+  <segment bytes="793299" number="7">1443761574.10326.7@reader.easyusenet.nl</segment>
+  <segment bytes="793179" number="8">1443761574.12804.8@reader.easyusenet.nl</segment>
+  <segment bytes="793211" number="9">1443761574.13567.9@reader.easyusenet.nl</segment>
+  <segment bytes="793203" number="10">1443761574.14266.10@reader.easyusenet.nl</segment>
+  <segment bytes="793160" number="11">1443761574.15151.11@reader.easyusenet.nl</segment>
+  <segment bytes="793316" number="12">1443761574.16568.12@reader.easyusenet.nl</segment>
+  <segment bytes="793298" number="13">1443761574.19606.13@reader.easyusenet.nl</segment>
+  <segment bytes="793298" number="14">1443761574.20292.14@reader.easyusenet.nl</segment>
+  <segment bytes="793263" number="15">1443761574.20760.15@reader.easyusenet.nl</segment>
+  <segment bytes="793285" number="16">1443761574.21984.16@reader.easyusenet.nl</segment>
+  <segment bytes="792980" number="17">1443761574.30260.17@reader.easyusenet.nl</segment>
+  <segment bytes="793267" number="18">1443761574.49142.18@reader.easyusenet.nl</segment>
+  <segment bytes="793346" number="19">1443761574.55790.19@reader.easyusenet.nl</segment>
+  <segment bytes="421757" number="20">1443761574.65564.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761575" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[18/49] - &quot;bones.s10e22.dvdrip.x264-reward.r02&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793219" number="1">1443761574.65782.1@reader.easyusenet.nl</segment>
+  <segment bytes="793060" number="2">1443761574.66178.2@reader.easyusenet.nl</segment>
+  <segment bytes="793369" number="3">1443761574.71142.3@reader.easyusenet.nl</segment>
+  <segment bytes="793272" number="4">1443761574.83681.4@reader.easyusenet.nl</segment>
+  <segment bytes="793270" number="5">1443761574.89087.5@reader.easyusenet.nl</segment>
+  <segment bytes="792874" number="6">1443761574.92705.6@reader.easyusenet.nl</segment>
+  <segment bytes="793265" number="7">1443761574.94867.7@reader.easyusenet.nl</segment>
+  <segment bytes="793196" number="8">1443761574.99247.8@reader.easyusenet.nl</segment>
+  <segment bytes="793346" number="9">1443761575.01245.9@reader.easyusenet.nl</segment>
+  <segment bytes="793080" number="10">1443761575.03050.10@reader.easyusenet.nl</segment>
+  <segment bytes="793288" number="11">1443761575.04990.11@reader.easyusenet.nl</segment>
+  <segment bytes="793185" number="12">1443761575.07147.12@reader.easyusenet.nl</segment>
+  <segment bytes="793242" number="13">1443761575.08972.13@reader.easyusenet.nl</segment>
+  <segment bytes="793323" number="14">1443761575.10036.14@reader.easyusenet.nl</segment>
+  <segment bytes="793144" number="15">1443761575.10427.15@reader.easyusenet.nl</segment>
+  <segment bytes="793430" number="16">1443761575.14437.16@reader.easyusenet.nl</segment>
+  <segment bytes="793354" number="17">1443761575.17594.17@reader.easyusenet.nl</segment>
+  <segment bytes="793329" number="18">1443761575.35984.18@reader.easyusenet.nl</segment>
+  <segment bytes="793060" number="19">1443761575.43409.19@reader.easyusenet.nl</segment>
+  <segment bytes="421564" number="20">1443761575.48145.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761576" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[19/49] - &quot;bones.s10e22.dvdrip.x264-reward.r03&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793220" number="1">1443761575.51102.1@reader.easyusenet.nl</segment>
+  <segment bytes="793099" number="2">1443761575.59856.2@reader.easyusenet.nl</segment>
+  <segment bytes="793040" number="3">1443761575.64656.3@reader.easyusenet.nl</segment>
+  <segment bytes="793126" number="4">1443761575.66049.4@reader.easyusenet.nl</segment>
+  <segment bytes="793146" number="5">1443761575.68288.5@reader.easyusenet.nl</segment>
+  <segment bytes="793220" number="6">1443761575.69398.6@reader.easyusenet.nl</segment>
+  <segment bytes="793037" number="7">1443761575.74193.7@reader.easyusenet.nl</segment>
+  <segment bytes="793198" number="8">1443761575.75682.8@reader.easyusenet.nl</segment>
+  <segment bytes="793289" number="9">1443761575.77865.9@reader.easyusenet.nl</segment>
+  <segment bytes="793459" number="10">1443761575.79637.10@reader.easyusenet.nl</segment>
+  <segment bytes="793150" number="11">1443761575.80580.11@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="12">1443761575.82675.12@reader.easyusenet.nl</segment>
+  <segment bytes="793154" number="13">1443761575.83090.13@reader.easyusenet.nl</segment>
+  <segment bytes="793013" number="14">1443761575.84257.14@reader.easyusenet.nl</segment>
+  <segment bytes="793070" number="15">1443761575.89637.15@reader.easyusenet.nl</segment>
+  <segment bytes="793349" number="16">1443761575.91408.16@reader.easyusenet.nl</segment>
+  <segment bytes="793008" number="17">1443761575.91815.17@reader.easyusenet.nl</segment>
+  <segment bytes="793214" number="18">1443761575.93944.18@reader.easyusenet.nl</segment>
+  <segment bytes="793291" number="19">1443761575.94356.19@reader.easyusenet.nl</segment>
+  <segment bytes="421693" number="20">1443761576.05024.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761576" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[20/49] - &quot;bones.s10e22.dvdrip.x264-reward.r04&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793198" number="1">1443761576.13656.1@reader.easyusenet.nl</segment>
+  <segment bytes="793227" number="2">1443761576.18548.2@reader.easyusenet.nl</segment>
+  <segment bytes="793219" number="3">1443761576.18992.3@reader.easyusenet.nl</segment>
+  <segment bytes="792950" number="4">1443761576.19403.4@reader.easyusenet.nl</segment>
+  <segment bytes="793244" number="5">1443761576.20346.5@reader.easyusenet.nl</segment>
+  <segment bytes="793241" number="6">1443761576.20738.6@reader.easyusenet.nl</segment>
+  <segment bytes="793049" number="7">1443761576.26712.7@reader.easyusenet.nl</segment>
+  <segment bytes="793191" number="8">1443761576.27115.8@reader.easyusenet.nl</segment>
+  <segment bytes="793314" number="9">1443761576.28547.9@reader.easyusenet.nl</segment>
+  <segment bytes="793040" number="10">1443761576.30428.10@reader.easyusenet.nl</segment>
+  <segment bytes="793170" number="11">1443761576.30875.11@reader.easyusenet.nl</segment>
+  <segment bytes="793196" number="12">1443761576.31275.12@reader.easyusenet.nl</segment>
+  <segment bytes="793070" number="13">1443761576.35984.13@reader.easyusenet.nl</segment>
+  <segment bytes="793193" number="14">1443761576.36808.14@reader.easyusenet.nl</segment>
+  <segment bytes="793015" number="15">1443761576.37861.15@reader.easyusenet.nl</segment>
+  <segment bytes="793147" number="16">1443761576.40509.16@reader.easyusenet.nl</segment>
+  <segment bytes="793192" number="17">1443761576.41713.17@reader.easyusenet.nl</segment>
+  <segment bytes="793003" number="18">1443761576.48427.18@reader.easyusenet.nl</segment>
+  <segment bytes="793275" number="19">1443761576.48853.19@reader.easyusenet.nl</segment>
+  <segment bytes="421754" number="20">1443761576.58940.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761577" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[21/49] - &quot;bones.s10e22.dvdrip.x264-reward.r05&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793011" number="1">1443761576.63770.1@reader.easyusenet.nl</segment>
+  <segment bytes="793039" number="2">1443761576.64719.2@reader.easyusenet.nl</segment>
+  <segment bytes="793286" number="3">1443761576.66146.3@reader.easyusenet.nl</segment>
+  <segment bytes="793069" number="4">1443761576.68317.4@reader.easyusenet.nl</segment>
+  <segment bytes="793019" number="5">1443761576.73789.5@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="6">1443761576.75158.6@reader.easyusenet.nl</segment>
+  <segment bytes="793528" number="7">1443761576.75551.7@reader.easyusenet.nl</segment>
+  <segment bytes="793112" number="8">1443761576.79211.8@reader.easyusenet.nl</segment>
+  <segment bytes="793132" number="9">1443761576.79604.9@reader.easyusenet.nl</segment>
+  <segment bytes="793394" number="10">1443761576.80418.10@reader.easyusenet.nl</segment>
+  <segment bytes="793133" number="11">1443761576.85591.11@reader.easyusenet.nl</segment>
+  <segment bytes="793135" number="12">1443761576.87004.12@reader.easyusenet.nl</segment>
+  <segment bytes="793016" number="13">1443761576.89237.13@reader.easyusenet.nl</segment>
+  <segment bytes="793342" number="14">1443761576.89619.14@reader.easyusenet.nl</segment>
+  <segment bytes="793228" number="15">1443761576.91326.15@reader.easyusenet.nl</segment>
+  <segment bytes="793037" number="16">1443761576.92845.16@reader.easyusenet.nl</segment>
+  <segment bytes="793181" number="17">1443761576.93776.17@reader.easyusenet.nl</segment>
+  <segment bytes="793170" number="18">1443761576.97887.18@reader.easyusenet.nl</segment>
+  <segment bytes="793106" number="19">1443761577.01712.19@reader.easyusenet.nl</segment>
+  <segment bytes="421879" number="20">1443761577.06043.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761577" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[22/49] - &quot;bones.s10e22.dvdrip.x264-reward.r06&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793178" number="1">1443761577.19762.1@reader.easyusenet.nl</segment>
+  <segment bytes="793230" number="2">1443761577.20715.2@reader.easyusenet.nl</segment>
+  <segment bytes="793277" number="3">1443761577.21111.3@reader.easyusenet.nl</segment>
+  <segment bytes="793246" number="4">1443761577.23308.4@reader.easyusenet.nl</segment>
+  <segment bytes="793209" number="5">1443761577.29582.5@reader.easyusenet.nl</segment>
+  <segment bytes="793058" number="6">1443761577.31009.6@reader.easyusenet.nl</segment>
+  <segment bytes="793050" number="7">1443761577.36494.7@reader.easyusenet.nl</segment>
+  <segment bytes="793260" number="8">1443761577.37995.8@reader.easyusenet.nl</segment>
+  <segment bytes="793107" number="9">1443761577.38378.9@reader.easyusenet.nl</segment>
+  <segment bytes="793146" number="10">1443761577.40395.10@reader.easyusenet.nl</segment>
+  <segment bytes="793199" number="11">1443761577.41247.11@reader.easyusenet.nl</segment>
+  <segment bytes="793034" number="12">1443761577.45866.12@reader.easyusenet.nl</segment>
+  <segment bytes="793101" number="13">1443761577.47629.13@reader.easyusenet.nl</segment>
+  <segment bytes="793402" number="14">1443761577.51746.14@reader.easyusenet.nl</segment>
+  <segment bytes="793210" number="15">1443761577.52320.15@reader.easyusenet.nl</segment>
+  <segment bytes="793039" number="16">1443761577.55848.16@reader.easyusenet.nl</segment>
+  <segment bytes="793139" number="17">1443761577.58178.17@reader.easyusenet.nl</segment>
+  <segment bytes="793208" number="18">1443761577.61211.18@reader.easyusenet.nl</segment>
+  <segment bytes="793152" number="19">1443761577.67289.19@reader.easyusenet.nl</segment>
+  <segment bytes="421609" number="20">1443761577.74565.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761578" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[23/49] - &quot;bones.s10e22.dvdrip.x264-reward.r07&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793211" number="1">1443761577.77005.1@reader.easyusenet.nl</segment>
+  <segment bytes="793250" number="2">1443761577.77462.2@reader.easyusenet.nl</segment>
+  <segment bytes="793078" number="3">1443761577.77893.3@reader.easyusenet.nl</segment>
+  <segment bytes="793135" number="4">1443761577.79084.4@reader.easyusenet.nl</segment>
+  <segment bytes="793106" number="5">1443761577.81761.5@reader.easyusenet.nl</segment>
+  <segment bytes="793244" number="6">1443761577.82198.6@reader.easyusenet.nl</segment>
+  <segment bytes="793116" number="7">1443761577.83765.7@reader.easyusenet.nl</segment>
+  <segment bytes="793158" number="8">1443761577.84970.8@reader.easyusenet.nl</segment>
+  <segment bytes="793314" number="9">1443761577.85404.9@reader.easyusenet.nl</segment>
+  <segment bytes="792953" number="10">1443761577.86446.10@reader.easyusenet.nl</segment>
+  <segment bytes="793196" number="11">1443761577.86855.11@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="12">1443761577.87555.12@reader.easyusenet.nl</segment>
+  <segment bytes="793285" number="13">1443761577.88046.13@reader.easyusenet.nl</segment>
+  <segment bytes="793166" number="14">1443761577.89880.14@reader.easyusenet.nl</segment>
+  <segment bytes="793118" number="15">1443761577.90668.15@reader.easyusenet.nl</segment>
+  <segment bytes="792974" number="16">1443761577.91660.16@reader.easyusenet.nl</segment>
+  <segment bytes="793063" number="17">1443761577.92727.17@reader.easyusenet.nl</segment>
+  <segment bytes="793079" number="18">1443761577.93128.18@reader.easyusenet.nl</segment>
+  <segment bytes="793119" number="19">1443761578.06992.19@reader.easyusenet.nl</segment>
+  <segment bytes="421897" number="20">1443761578.07379.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761578" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[24/49] - &quot;bones.s10e22.dvdrip.x264-reward.r08&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="792977" number="1">1443761578.14906.1@reader.easyusenet.nl</segment>
+  <segment bytes="793381" number="2">1443761578.16631.2@reader.easyusenet.nl</segment>
+  <segment bytes="792999" number="3">1443761578.22546.3@reader.easyusenet.nl</segment>
+  <segment bytes="792964" number="4">1443761578.22944.4@reader.easyusenet.nl</segment>
+  <segment bytes="792936" number="5">1443761578.25592.5@reader.easyusenet.nl</segment>
+  <segment bytes="793224" number="6">1443761578.27845.6@reader.easyusenet.nl</segment>
+  <segment bytes="793066" number="7">1443761578.30121.7@reader.easyusenet.nl</segment>
+  <segment bytes="792921" number="8">1443761578.30696.8@reader.easyusenet.nl</segment>
+  <segment bytes="793136" number="9">1443761578.31092.9@reader.easyusenet.nl</segment>
+  <segment bytes="793189" number="10">1443761578.31478.10@reader.easyusenet.nl</segment>
+  <segment bytes="793257" number="11">1443761578.34753.11@reader.easyusenet.nl</segment>
+  <segment bytes="793190" number="12">1443761578.37049.12@reader.easyusenet.nl</segment>
+  <segment bytes="793365" number="13">1443761578.38253.13@reader.easyusenet.nl</segment>
+  <segment bytes="793223" number="14">1443761578.39762.14@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="15">1443761578.43933.15@reader.easyusenet.nl</segment>
+  <segment bytes="793311" number="16">1443761578.44395.16@reader.easyusenet.nl</segment>
+  <segment bytes="793158" number="17">1443761578.45872.17@reader.easyusenet.nl</segment>
+  <segment bytes="793143" number="18">1443761578.49210.18@reader.easyusenet.nl</segment>
+  <segment bytes="793153" number="19">1443761578.56397.19@reader.easyusenet.nl</segment>
+  <segment bytes="421745" number="20">1443761578.57880.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761579" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[25/49] - &quot;bones.s10e22.dvdrip.x264-reward.r09&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793037" number="1">1443761578.58569.1@reader.easyusenet.nl</segment>
+  <segment bytes="793103" number="2">1443761578.62600.2@reader.easyusenet.nl</segment>
+  <segment bytes="793254" number="3">1443761578.67980.3@reader.easyusenet.nl</segment>
+  <segment bytes="793144" number="4">1443761578.72252.4@reader.easyusenet.nl</segment>
+  <segment bytes="793236" number="5">1443761578.73348.5@reader.easyusenet.nl</segment>
+  <segment bytes="793242" number="6">1443761578.76127.6@reader.easyusenet.nl</segment>
+  <segment bytes="793194" number="7">1443761578.77593.7@reader.easyusenet.nl</segment>
+  <segment bytes="793130" number="8">1443761578.79580.8@reader.easyusenet.nl</segment>
+  <segment bytes="793204" number="9">1443761578.79955.9@reader.easyusenet.nl</segment>
+  <segment bytes="793219" number="10">1443761578.83049.10@reader.easyusenet.nl</segment>
+  <segment bytes="793023" number="11">1443761578.87276.11@reader.easyusenet.nl</segment>
+  <segment bytes="793066" number="12">1443761578.87688.12@reader.easyusenet.nl</segment>
+  <segment bytes="793123" number="13">1443761578.88803.13@reader.easyusenet.nl</segment>
+  <segment bytes="793023" number="14">1443761578.90786.14@reader.easyusenet.nl</segment>
+  <segment bytes="792986" number="15">1443761578.93619.15@reader.easyusenet.nl</segment>
+  <segment bytes="793213" number="16">1443761578.98894.16@reader.easyusenet.nl</segment>
+  <segment bytes="793252" number="17">1443761579.07821.17@reader.easyusenet.nl</segment>
+  <segment bytes="793268" number="18">1443761579.10587.18@reader.easyusenet.nl</segment>
+  <segment bytes="793113" number="19">1443761579.15768.19@reader.easyusenet.nl</segment>
+  <segment bytes="421836" number="20">1443761579.19805.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761579" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[26/49] - &quot;bones.s10e22.dvdrip.x264-reward.r10&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793137" number="1">1443761579.21107.1@reader.easyusenet.nl</segment>
+  <segment bytes="793119" number="2">1443761579.26606.2@reader.easyusenet.nl</segment>
+  <segment bytes="793191" number="3">1443761579.34991.3@reader.easyusenet.nl</segment>
+  <segment bytes="793343" number="4">1443761579.38198.4@reader.easyusenet.nl</segment>
+  <segment bytes="793160" number="5">1443761579.39631.5@reader.easyusenet.nl</segment>
+  <segment bytes="793145" number="6">1443761579.40812.6@reader.easyusenet.nl</segment>
+  <segment bytes="792994" number="7">1443761579.42420.7@reader.easyusenet.nl</segment>
+  <segment bytes="793310" number="8">1443761579.45810.8@reader.easyusenet.nl</segment>
+  <segment bytes="792916" number="9">1443761579.46510.9@reader.easyusenet.nl</segment>
+  <segment bytes="792948" number="10">1443761579.48853.10@reader.easyusenet.nl</segment>
+  <segment bytes="793200" number="11">1443761579.53164.11@reader.easyusenet.nl</segment>
+  <segment bytes="793391" number="12">1443761579.53564.12@reader.easyusenet.nl</segment>
+  <segment bytes="793177" number="13">1443761579.53951.13@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="14">1443761579.58304.14@reader.easyusenet.nl</segment>
+  <segment bytes="793259" number="15">1443761579.61629.15@reader.easyusenet.nl</segment>
+  <segment bytes="793089" number="16">1443761579.65241.16@reader.easyusenet.nl</segment>
+  <segment bytes="793299" number="17">1443761579.68288.17@reader.easyusenet.nl</segment>
+  <segment bytes="793370" number="18">1443761579.71427.18@reader.easyusenet.nl</segment>
+  <segment bytes="793107" number="19">1443761579.71937.19@reader.easyusenet.nl</segment>
+  <segment bytes="421668" number="20">1443761579.72372.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761580" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[27/49] - &quot;bones.s10e22.dvdrip.x264-reward.r11&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793057" number="1">1443761579.73909.1@reader.easyusenet.nl</segment>
+  <segment bytes="793274" number="2">1443761579.79161.2@reader.easyusenet.nl</segment>
+  <segment bytes="793228" number="3">1443761579.81282.3@reader.easyusenet.nl</segment>
+  <segment bytes="793189" number="4">1443761579.82530.4@reader.easyusenet.nl</segment>
+  <segment bytes="793075" number="5">1443761579.83524.5@reader.easyusenet.nl</segment>
+  <segment bytes="793212" number="6">1443761579.84927.6@reader.easyusenet.nl</segment>
+  <segment bytes="793544" number="7">1443761579.87539.7@reader.easyusenet.nl</segment>
+  <segment bytes="793160" number="8">1443761579.87943.8@reader.easyusenet.nl</segment>
+  <segment bytes="792974" number="9">1443761579.88903.9@reader.easyusenet.nl</segment>
+  <segment bytes="793227" number="10">1443761579.94826.10@reader.easyusenet.nl</segment>
+  <segment bytes="793029" number="11">1443761579.95240.11@reader.easyusenet.nl</segment>
+  <segment bytes="793058" number="12">1443761579.95941.12@reader.easyusenet.nl</segment>
+  <segment bytes="793058" number="13">1443761580.00567.13@reader.easyusenet.nl</segment>
+  <segment bytes="793213" number="14">1443761580.01031.14@reader.easyusenet.nl</segment>
+  <segment bytes="793381" number="15">1443761580.03012.15@reader.easyusenet.nl</segment>
+  <segment bytes="793150" number="16">1443761580.05901.16@reader.easyusenet.nl</segment>
+  <segment bytes="793249" number="17">1443761580.11037.17@reader.easyusenet.nl</segment>
+  <segment bytes="793180" number="18">1443761580.14469.18@reader.easyusenet.nl</segment>
+  <segment bytes="793092" number="19">1443761580.15387.19@reader.easyusenet.nl</segment>
+  <segment bytes="421804" number="20">1443761580.16102.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761581" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[28/49] - &quot;bones.s10e22.dvdrip.x264-reward.r12&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793041" number="1">1443761580.19221.1@reader.easyusenet.nl</segment>
+  <segment bytes="793052" number="2">1443761580.24450.2@reader.easyusenet.nl</segment>
+  <segment bytes="793101" number="3">1443761580.25691.3@reader.easyusenet.nl</segment>
+  <segment bytes="793364" number="4">1443761580.27225.4@reader.easyusenet.nl</segment>
+  <segment bytes="793246" number="5">1443761580.28119.5@reader.easyusenet.nl</segment>
+  <segment bytes="793233" number="6">1443761580.30012.6@reader.easyusenet.nl</segment>
+  <segment bytes="793030" number="7">1443761580.32906.7@reader.easyusenet.nl</segment>
+  <segment bytes="793254" number="8">1443761580.33633.8@reader.easyusenet.nl</segment>
+  <segment bytes="793107" number="9">1443761580.34428.9@reader.easyusenet.nl</segment>
+  <segment bytes="793275" number="10">1443761580.42178.10@reader.easyusenet.nl</segment>
+  <segment bytes="793317" number="11">1443761580.43067.11@reader.easyusenet.nl</segment>
+  <segment bytes="793461" number="12">1443761580.44141.12@reader.easyusenet.nl</segment>
+  <segment bytes="793221" number="13">1443761580.44544.13@reader.easyusenet.nl</segment>
+  <segment bytes="793016" number="14">1443761580.50849.14@reader.easyusenet.nl</segment>
+  <segment bytes="793154" number="15">1443761580.53474.15@reader.easyusenet.nl</segment>
+  <segment bytes="793320" number="16">1443761580.59319.16@reader.easyusenet.nl</segment>
+  <segment bytes="793122" number="17">1443761580.67006.17@reader.easyusenet.nl</segment>
+  <segment bytes="793261" number="18">1443761580.69076.18@reader.easyusenet.nl</segment>
+  <segment bytes="793114" number="19">1443761580.70013.19@reader.easyusenet.nl</segment>
+  <segment bytes="421987" number="20">1443761580.71227.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761581" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[29/49] - &quot;bones.s10e22.dvdrip.x264-reward.r13&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793248" number="1">1443761580.72339.1@reader.easyusenet.nl</segment>
+  <segment bytes="792782" number="2">1443761580.80275.2@reader.easyusenet.nl</segment>
+  <segment bytes="793197" number="3">1443761580.81622.3@reader.easyusenet.nl</segment>
+  <segment bytes="793311" number="4">1443761580.82981.4@reader.easyusenet.nl</segment>
+  <segment bytes="792984" number="5">1443761580.84578.5@reader.easyusenet.nl</segment>
+  <segment bytes="793408" number="6">1443761580.88911.6@reader.easyusenet.nl</segment>
+  <segment bytes="793335" number="7">1443761580.91739.7@reader.easyusenet.nl</segment>
+  <segment bytes="793123" number="8">1443761580.96833.8@reader.easyusenet.nl</segment>
+  <segment bytes="793195" number="9">1443761581.00021.9@reader.easyusenet.nl</segment>
+  <segment bytes="793306" number="10">1443761581.00995.10@reader.easyusenet.nl</segment>
+  <segment bytes="793212" number="11">1443761581.01458.11@reader.easyusenet.nl</segment>
+  <segment bytes="793274" number="12">1443761581.02594.12@reader.easyusenet.nl</segment>
+  <segment bytes="793113" number="13">1443761581.02999.13@reader.easyusenet.nl</segment>
+  <segment bytes="793295" number="14">1443761581.06335.14@reader.easyusenet.nl</segment>
+  <segment bytes="793073" number="15">1443761581.10276.15@reader.easyusenet.nl</segment>
+  <segment bytes="793225" number="16">1443761581.13371.16@reader.easyusenet.nl</segment>
+  <segment bytes="793382" number="17">1443761581.22488.17@reader.easyusenet.nl</segment>
+  <segment bytes="793334" number="18">1443761581.25512.18@reader.easyusenet.nl</segment>
+  <segment bytes="793273" number="19">1443761581.26815.19@reader.easyusenet.nl</segment>
+  <segment bytes="421804" number="20">1443761581.28260.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761581" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[30/49] - &quot;bones.s10e22.dvdrip.x264-reward.r14&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793393" number="1">1443761581.28516.1@reader.easyusenet.nl</segment>
+  <segment bytes="793147" number="2">1443761581.32230.2@reader.easyusenet.nl</segment>
+  <segment bytes="793387" number="3">1443761581.33744.3@reader.easyusenet.nl</segment>
+  <segment bytes="793192" number="4">1443761581.36493.4@reader.easyusenet.nl</segment>
+  <segment bytes="792966" number="5">1443761581.36949.5@reader.easyusenet.nl</segment>
+  <segment bytes="793333" number="6">1443761581.39284.6@reader.easyusenet.nl</segment>
+  <segment bytes="792947" number="7">1443761581.40170.7@reader.easyusenet.nl</segment>
+  <segment bytes="793250" number="8">1443761581.41527.8@reader.easyusenet.nl</segment>
+  <segment bytes="793161" number="9">1443761581.42513.9@reader.easyusenet.nl</segment>
+  <segment bytes="793169" number="10">1443761581.42966.10@reader.easyusenet.nl</segment>
+  <segment bytes="793106" number="11">1443761581.43357.11@reader.easyusenet.nl</segment>
+  <segment bytes="793280" number="12">1443761581.43810.12@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="13">1443761581.44230.13@reader.easyusenet.nl</segment>
+  <segment bytes="793225" number="14">1443761581.44639.14@reader.easyusenet.nl</segment>
+  <segment bytes="793241" number="15">1443761581.45055.15@reader.easyusenet.nl</segment>
+  <segment bytes="793084" number="16">1443761581.47257.16@reader.easyusenet.nl</segment>
+  <segment bytes="793109" number="17">1443761581.50041.17@reader.easyusenet.nl</segment>
+  <segment bytes="793236" number="18">1443761581.52505.18@reader.easyusenet.nl</segment>
+  <segment bytes="793301" number="19">1443761581.57014.19@reader.easyusenet.nl</segment>
+  <segment bytes="421800" number="20">1443761581.57879.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761582" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[31/49] - &quot;bones.s10e22.dvdrip.x264-reward.r15&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793079" number="1">1443761581.59087.1@reader.easyusenet.nl</segment>
+  <segment bytes="793258" number="2">1443761581.63171.2@reader.easyusenet.nl</segment>
+  <segment bytes="793198" number="3">1443761581.64620.3@reader.easyusenet.nl</segment>
+  <segment bytes="793252" number="4">1443761581.68660.4@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="5">1443761581.69428.5@reader.easyusenet.nl</segment>
+  <segment bytes="793176" number="6">1443761581.74308.6@reader.easyusenet.nl</segment>
+  <segment bytes="793323" number="7">1443761581.74730.7@reader.easyusenet.nl</segment>
+  <segment bytes="793251" number="8">1443761581.78022.8@reader.easyusenet.nl</segment>
+  <segment bytes="793328" number="9">1443761581.78622.9@reader.easyusenet.nl</segment>
+  <segment bytes="793126" number="10">1443761581.79654.10@reader.easyusenet.nl</segment>
+  <segment bytes="793144" number="11">1443761581.80064.11@reader.easyusenet.nl</segment>
+  <segment bytes="793025" number="12">1443761581.80647.12@reader.easyusenet.nl</segment>
+  <segment bytes="793285" number="13">1443761581.81077.13@reader.easyusenet.nl</segment>
+  <segment bytes="792977" number="14">1443761581.81486.14@reader.easyusenet.nl</segment>
+  <segment bytes="793214" number="15">1443761581.81906.15@reader.easyusenet.nl</segment>
+  <segment bytes="793267" number="16">1443761581.82303.16@reader.easyusenet.nl</segment>
+  <segment bytes="792969" number="17">1443761581.84764.17@reader.easyusenet.nl</segment>
+  <segment bytes="793198" number="18">1443761581.89202.18@reader.easyusenet.nl</segment>
+  <segment bytes="793215" number="19">1443761581.92378.19@reader.easyusenet.nl</segment>
+  <segment bytes="421801" number="20">1443761581.99293.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761582" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[32/49] - &quot;bones.s10e22.dvdrip.x264-reward.r16&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793100" number="1">1443761582.00811.1@reader.easyusenet.nl</segment>
+  <segment bytes="793187" number="2">1443761582.03783.2@reader.easyusenet.nl</segment>
+  <segment bytes="793262" number="3">1443761582.05644.3@reader.easyusenet.nl</segment>
+  <segment bytes="793321" number="4">1443761582.07157.4@reader.easyusenet.nl</segment>
+  <segment bytes="792999" number="5">1443761582.09216.5@reader.easyusenet.nl</segment>
+  <segment bytes="793242" number="6">1443761582.11032.6@reader.easyusenet.nl</segment>
+  <segment bytes="793345" number="7">1443761582.11701.7@reader.easyusenet.nl</segment>
+  <segment bytes="793173" number="8">1443761582.13542.8@reader.easyusenet.nl</segment>
+  <segment bytes="793284" number="9">1443761582.14122.9@reader.easyusenet.nl</segment>
+  <segment bytes="793204" number="10">1443761582.14648.10@reader.easyusenet.nl</segment>
+  <segment bytes="793087" number="11">1443761582.15490.11@reader.easyusenet.nl</segment>
+  <segment bytes="793118" number="12">1443761582.15927.12@reader.easyusenet.nl</segment>
+  <segment bytes="792994" number="13">1443761582.16453.13@reader.easyusenet.nl</segment>
+  <segment bytes="793382" number="14">1443761582.16884.14@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="15">1443761582.17318.15@reader.easyusenet.nl</segment>
+  <segment bytes="793327" number="16">1443761582.17760.16@reader.easyusenet.nl</segment>
+  <segment bytes="793225" number="17">1443761582.18197.17@reader.easyusenet.nl</segment>
+  <segment bytes="793049" number="18">1443761582.18684.18@reader.easyusenet.nl</segment>
+  <segment bytes="793229" number="19">1443761582.20798.19@reader.easyusenet.nl</segment>
+  <segment bytes="421697" number="20">1443761582.21825.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761583" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[33/49] - &quot;bones.s10e22.dvdrip.x264-reward.r17&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793097" number="1">1443761582.26896.1@reader.easyusenet.nl</segment>
+  <segment bytes="793107" number="2">1443761582.32599.2@reader.easyusenet.nl</segment>
+  <segment bytes="793212" number="3">1443761582.33348.3@reader.easyusenet.nl</segment>
+  <segment bytes="793147" number="4">1443761582.37113.4@reader.easyusenet.nl</segment>
+  <segment bytes="793089" number="5">1443761582.46229.5@reader.easyusenet.nl</segment>
+  <segment bytes="793262" number="6">1443761582.48886.6@reader.easyusenet.nl</segment>
+  <segment bytes="793114" number="7">1443761582.60737.7@reader.easyusenet.nl</segment>
+  <segment bytes="793403" number="8">1443761582.63804.8@reader.easyusenet.nl</segment>
+  <segment bytes="793249" number="9">1443761582.64454.9@reader.easyusenet.nl</segment>
+  <segment bytes="793107" number="10">1443761582.64860.10@reader.easyusenet.nl</segment>
+  <segment bytes="793252" number="11">1443761582.65623.11@reader.easyusenet.nl</segment>
+  <segment bytes="793339" number="12">1443761582.66738.12@reader.easyusenet.nl</segment>
+  <segment bytes="793037" number="13">1443761582.67156.13@reader.easyusenet.nl</segment>
+  <segment bytes="793080" number="14">1443761582.67556.14@reader.easyusenet.nl</segment>
+  <segment bytes="793151" number="15">1443761582.67947.15@reader.easyusenet.nl</segment>
+  <segment bytes="793230" number="16">1443761582.68349.16@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="17">1443761582.68731.17@reader.easyusenet.nl</segment>
+  <segment bytes="793296" number="18">1443761582.70507.18@reader.easyusenet.nl</segment>
+  <segment bytes="793154" number="19">1443761582.73476.19@reader.easyusenet.nl</segment>
+  <segment bytes="421888" number="20">1443761582.73901.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761583" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[34/49] - &quot;bones.s10e22.dvdrip.x264-reward.r18&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793118" number="1">1443761582.79832.1@reader.easyusenet.nl</segment>
+  <segment bytes="793055" number="2">1443761582.86754.2@reader.easyusenet.nl</segment>
+  <segment bytes="793279" number="3">1443761582.89114.3@reader.easyusenet.nl</segment>
+  <segment bytes="793241" number="4">1443761582.96043.4@reader.easyusenet.nl</segment>
+  <segment bytes="793184" number="5">1443761582.96831.5@reader.easyusenet.nl</segment>
+  <segment bytes="793088" number="6">1443761582.98669.6@reader.easyusenet.nl</segment>
+  <segment bytes="793005" number="7">1443761583.00084.7@reader.easyusenet.nl</segment>
+  <segment bytes="793056" number="8">1443761583.03473.8@reader.easyusenet.nl</segment>
+  <segment bytes="793014" number="9">1443761583.05674.9@reader.easyusenet.nl</segment>
+  <segment bytes="793218" number="10">1443761583.06361.10@reader.easyusenet.nl</segment>
+  <segment bytes="793368" number="11">1443761583.09743.11@reader.easyusenet.nl</segment>
+  <segment bytes="793240" number="12">1443761583.10145.12@reader.easyusenet.nl</segment>
+  <segment bytes="793254" number="13">1443761583.10541.13@reader.easyusenet.nl</segment>
+  <segment bytes="793341" number="14">1443761583.10931.14@reader.easyusenet.nl</segment>
+  <segment bytes="792990" number="15">1443761583.11326.15@reader.easyusenet.nl</segment>
+  <segment bytes="793117" number="16">1443761583.14377.16@reader.easyusenet.nl</segment>
+  <segment bytes="793223" number="17">1443761583.15178.17@reader.easyusenet.nl</segment>
+  <segment bytes="793291" number="18">1443761583.15877.18@reader.easyusenet.nl</segment>
+  <segment bytes="793269" number="19">1443761583.18267.19@reader.easyusenet.nl</segment>
+  <segment bytes="421742" number="20">1443761583.19990.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761583" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[35/49] - &quot;bones.s10e22.dvdrip.x264-reward.r19&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793280" number="1">1443761583.21657.1@reader.easyusenet.nl</segment>
+  <segment bytes="793142" number="2">1443761583.29335.2@reader.easyusenet.nl</segment>
+  <segment bytes="793167" number="3">1443761583.31583.3@reader.easyusenet.nl</segment>
+  <segment bytes="793244" number="4">1443761583.40046.4@reader.easyusenet.nl</segment>
+  <segment bytes="793144" number="5">1443761583.42320.5@reader.easyusenet.nl</segment>
+  <segment bytes="793439" number="6">1443761583.42723.6@reader.easyusenet.nl</segment>
+  <segment bytes="793232" number="7">1443761583.43827.7@reader.easyusenet.nl</segment>
+  <segment bytes="793061" number="8">1443761583.48456.8@reader.easyusenet.nl</segment>
+  <segment bytes="793049" number="9">1443761583.49771.9@reader.easyusenet.nl</segment>
+  <segment bytes="793385" number="10">1443761583.51865.10@reader.easyusenet.nl</segment>
+  <segment bytes="793455" number="11">1443761583.53066.11@reader.easyusenet.nl</segment>
+  <segment bytes="793315" number="12">1443761583.57688.12@reader.easyusenet.nl</segment>
+  <segment bytes="793097" number="13">1443761583.58824.13@reader.easyusenet.nl</segment>
+  <segment bytes="793146" number="14">1443761583.59237.14@reader.easyusenet.nl</segment>
+  <segment bytes="793198" number="15">1443761583.59789.15@reader.easyusenet.nl</segment>
+  <segment bytes="793132" number="16">1443761583.60459.16@reader.easyusenet.nl</segment>
+  <segment bytes="793246" number="17">1443761583.64341.17@reader.easyusenet.nl</segment>
+  <segment bytes="793110" number="18">1443761583.65231.18@reader.easyusenet.nl</segment>
+  <segment bytes="793328" number="19">1443761583.65989.19@reader.easyusenet.nl</segment>
+  <segment bytes="421685" number="20">1443761583.69275.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761584" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[36/49] - &quot;bones.s10e22.dvdrip.x264-reward.r20&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793215" number="1">1443761583.79310.1@reader.easyusenet.nl</segment>
+  <segment bytes="793237" number="2">1443761583.81423.2@reader.easyusenet.nl</segment>
+  <segment bytes="793442" number="3">1443761583.83409.3@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="4">1443761583.94253.4@reader.easyusenet.nl</segment>
+  <segment bytes="793206" number="5">1443761583.94663.5@reader.easyusenet.nl</segment>
+  <segment bytes="793139" number="6">1443761583.95408.6@reader.easyusenet.nl</segment>
+  <segment bytes="793097" number="7">1443761583.97450.7@reader.easyusenet.nl</segment>
+  <segment bytes="793529" number="8">1443761584.02136.8@reader.easyusenet.nl</segment>
+  <segment bytes="793405" number="9">1443761584.02545.9@reader.easyusenet.nl</segment>
+  <segment bytes="793333" number="10">1443761584.04435.10@reader.easyusenet.nl</segment>
+  <segment bytes="793126" number="11">1443761584.05675.11@reader.easyusenet.nl</segment>
+  <segment bytes="793236" number="12">1443761584.09165.12@reader.easyusenet.nl</segment>
+  <segment bytes="793011" number="13">1443761584.12377.13@reader.easyusenet.nl</segment>
+  <segment bytes="793254" number="14">1443761584.13802.14@reader.easyusenet.nl</segment>
+  <segment bytes="793109" number="15">1443761584.14171.15@reader.easyusenet.nl</segment>
+  <segment bytes="792892" number="16">1443761584.15367.16@reader.easyusenet.nl</segment>
+  <segment bytes="793176" number="17">1443761584.15739.17@reader.easyusenet.nl</segment>
+  <segment bytes="792975" number="18">1443761584.20273.18@reader.easyusenet.nl</segment>
+  <segment bytes="793260" number="19">1443761584.20649.19@reader.easyusenet.nl</segment>
+  <segment bytes="421845" number="20">1443761584.21514.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761584" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[37/49] - &quot;bones.s10e22.dvdrip.x264-reward.r21&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793060" number="1">1443761584.41377.1@reader.easyusenet.nl</segment>
+  <segment bytes="793227" number="2">1443761584.43050.2@reader.easyusenet.nl</segment>
+  <segment bytes="793206" number="3">1443761584.44798.3@reader.easyusenet.nl</segment>
+  <segment bytes="793273" number="4">1443761584.51996.4@reader.easyusenet.nl</segment>
+  <segment bytes="793154" number="5">1443761584.54071.5@reader.easyusenet.nl</segment>
+  <segment bytes="793156" number="6">1443761584.54448.6@reader.easyusenet.nl</segment>
+  <segment bytes="793182" number="7">1443761584.57150.7@reader.easyusenet.nl</segment>
+  <segment bytes="793340" number="8">1443761584.57938.8@reader.easyusenet.nl</segment>
+  <segment bytes="793331" number="9">1443761584.58642.9@reader.easyusenet.nl</segment>
+  <segment bytes="793368" number="10">1443761584.59583.10@reader.easyusenet.nl</segment>
+  <segment bytes="793184" number="11">1443761584.61140.11@reader.easyusenet.nl</segment>
+  <segment bytes="793212" number="12">1443761584.63381.12@reader.easyusenet.nl</segment>
+  <segment bytes="793386" number="13">1443761584.63782.13@reader.easyusenet.nl</segment>
+  <segment bytes="793097" number="14">1443761584.64158.14@reader.easyusenet.nl</segment>
+  <segment bytes="793064" number="15">1443761584.67100.15@reader.easyusenet.nl</segment>
+  <segment bytes="793061" number="16">1443761584.68046.16@reader.easyusenet.nl</segment>
+  <segment bytes="793225" number="17">1443761584.69431.17@reader.easyusenet.nl</segment>
+  <segment bytes="793052" number="18">1443761584.69846.18@reader.easyusenet.nl</segment>
+  <segment bytes="792885" number="19">1443761584.70214.19@reader.easyusenet.nl</segment>
+  <segment bytes="421798" number="20">1443761584.70577.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761585" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[38/49] - &quot;bones.s10e22.dvdrip.x264-reward.r22&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793159" number="1">1443761584.78243.1@reader.easyusenet.nl</segment>
+  <segment bytes="793202" number="2">1443761584.80384.2@reader.easyusenet.nl</segment>
+  <segment bytes="793098" number="3">1443761584.81963.3@reader.easyusenet.nl</segment>
+  <segment bytes="793013" number="4">1443761584.89445.4@reader.easyusenet.nl</segment>
+  <segment bytes="792915" number="5">1443761584.92001.5@reader.easyusenet.nl</segment>
+  <segment bytes="793064" number="6">1443761584.92369.6@reader.easyusenet.nl</segment>
+  <segment bytes="793180" number="7">1443761584.92729.7@reader.easyusenet.nl</segment>
+  <segment bytes="793282" number="8">1443761584.95510.8@reader.easyusenet.nl</segment>
+  <segment bytes="793258" number="9">1443761584.97187.9@reader.easyusenet.nl</segment>
+  <segment bytes="793287" number="10">1443761584.97566.10@reader.easyusenet.nl</segment>
+  <segment bytes="793251" number="11">1443761584.98074.11@reader.easyusenet.nl</segment>
+  <segment bytes="793179" number="12">1443761585.00503.12@reader.easyusenet.nl</segment>
+  <segment bytes="793230" number="13">1443761585.01427.13@reader.easyusenet.nl</segment>
+  <segment bytes="793169" number="14">1443761585.02601.14@reader.easyusenet.nl</segment>
+  <segment bytes="793372" number="15">1443761585.03025.15@reader.easyusenet.nl</segment>
+  <segment bytes="793060" number="16">1443761585.05634.16@reader.easyusenet.nl</segment>
+  <segment bytes="793043" number="17">1443761585.06852.17@reader.easyusenet.nl</segment>
+  <segment bytes="793090" number="18">1443761585.08452.18@reader.easyusenet.nl</segment>
+  <segment bytes="793024" number="19">1443761585.08833.19@reader.easyusenet.nl</segment>
+  <segment bytes="421831" number="20">1443761585.09650.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[39/49] - &quot;bones.s10e22.dvdrip.x264-reward.r23&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793105" number="1">1443761585.15653.1@reader.easyusenet.nl</segment>
+  <segment bytes="793194" number="2">1443761585.18666.2@reader.easyusenet.nl</segment>
+  <segment bytes="793021" number="3">1443761585.20653.3@reader.easyusenet.nl</segment>
+  <segment bytes="793136" number="4">1443761585.29503.4@reader.easyusenet.nl</segment>
+  <segment bytes="793003" number="5">1443761585.33230.5@reader.easyusenet.nl</segment>
+  <segment bytes="793327" number="6">1443761585.34747.6@reader.easyusenet.nl</segment>
+  <segment bytes="793147" number="7">1443761585.35124.7@reader.easyusenet.nl</segment>
+  <segment bytes="793467" number="8">1443761585.35502.8@reader.easyusenet.nl</segment>
+  <segment bytes="792919" number="9">1443761585.37682.9@reader.easyusenet.nl</segment>
+  <segment bytes="793414" number="10">1443761585.39703.10@reader.easyusenet.nl</segment>
+  <segment bytes="793274" number="11">1443761585.41807.11@reader.easyusenet.nl</segment>
+  <segment bytes="793252" number="12">1443761585.42190.12@reader.easyusenet.nl</segment>
+  <segment bytes="793407" number="13">1443761585.44458.13@reader.easyusenet.nl</segment>
+  <segment bytes="793272" number="14">1443761585.45375.14@reader.easyusenet.nl</segment>
+  <segment bytes="793157" number="15">1443761585.47363.15@reader.easyusenet.nl</segment>
+  <segment bytes="793041" number="16">1443761585.48506.16@reader.easyusenet.nl</segment>
+  <segment bytes="793224" number="17">1443761585.52487.17@reader.easyusenet.nl</segment>
+  <segment bytes="793168" number="18">1443761585.54979.18@reader.easyusenet.nl</segment>
+  <segment bytes="793237" number="19">1443761585.57226.19@reader.easyusenet.nl</segment>
+  <segment bytes="421809" number="20">1443761585.65788.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[40/49] - &quot;bones.s10e22.dvdrip.x264-reward.r24&quot; yEnc (1/15)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793200" number="1">1443761585.69316.1@reader.easyusenet.nl</segment>
+  <segment bytes="793264" number="2">1443761585.73041.2@reader.easyusenet.nl</segment>
+  <segment bytes="793201" number="3">1443761585.73493.3@reader.easyusenet.nl</segment>
+  <segment bytes="793247" number="4">1443761585.80975.4@reader.easyusenet.nl</segment>
+  <segment bytes="793122" number="5">1443761585.86487.5@reader.easyusenet.nl</segment>
+  <segment bytes="793165" number="6">1443761585.89180.6@reader.easyusenet.nl</segment>
+  <segment bytes="793229" number="7">1443761585.92728.7@reader.easyusenet.nl</segment>
+  <segment bytes="793251" number="8">1443761585.96437.8@reader.easyusenet.nl</segment>
+  <segment bytes="793150" number="9">1443761585.98618.9@reader.easyusenet.nl</segment>
+  <segment bytes="793421" number="10">1443761585.99021.10@reader.easyusenet.nl</segment>
+  <segment bytes="793244" number="11">1443761585.99395.11@reader.easyusenet.nl</segment>
+  <segment bytes="793336" number="12">1443761586.03371.12@reader.easyusenet.nl</segment>
+  <segment bytes="792919" number="13">1443761586.04388.13@reader.easyusenet.nl</segment>
+  <segment bytes="792959" number="14">1443761586.05581.14@reader.easyusenet.nl</segment>
+  <segment bytes="399381" number="15">1443761586.08962.15@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[41/49] - &quot;bones.s10e22.dvdrip.x264-reward.rar&quot; yEnc (1/20)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793064" number="1">1443761586.11483.1@reader.easyusenet.nl</segment>
+  <segment bytes="793153" number="2">1443761586.15753.2@reader.easyusenet.nl</segment>
+  <segment bytes="793210" number="3">1443761586.16132.3@reader.easyusenet.nl</segment>
+  <segment bytes="793113" number="4">1443761586.18644.4@reader.easyusenet.nl</segment>
+  <segment bytes="793188" number="5">1443761586.19015.5@reader.easyusenet.nl</segment>
+  <segment bytes="793132" number="6">1443761586.31189.6@reader.easyusenet.nl</segment>
+  <segment bytes="792999" number="7">1443761586.34064.7@reader.easyusenet.nl</segment>
+  <segment bytes="793227" number="8">1443761586.36368.8@reader.easyusenet.nl</segment>
+  <segment bytes="793191" number="9">1443761586.37363.9@reader.easyusenet.nl</segment>
+  <segment bytes="793105" number="10">1443761586.39388.10@reader.easyusenet.nl</segment>
+  <segment bytes="793200" number="11">1443761586.40882.11@reader.easyusenet.nl</segment>
+  <segment bytes="793028" number="12">1443761586.42399.12@reader.easyusenet.nl</segment>
+  <segment bytes="793087" number="13">1443761586.44074.13@reader.easyusenet.nl</segment>
+  <segment bytes="793206" number="14">1443761586.46221.14@reader.easyusenet.nl</segment>
+  <segment bytes="793074" number="15">1443761586.47235.15@reader.easyusenet.nl</segment>
+  <segment bytes="793097" number="16">1443761586.47755.16@reader.easyusenet.nl</segment>
+  <segment bytes="793185" number="17">1443761586.48369.17@reader.easyusenet.nl</segment>
+  <segment bytes="793060" number="18">1443761586.50238.18@reader.easyusenet.nl</segment>
+  <segment bytes="793202" number="19">1443761586.50637.19@reader.easyusenet.nl</segment>
+  <segment bytes="421883" number="20">1443761586.51139.20@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[42/49] - &quot;bones.s10e22.dvdrip.x264-reward.sfv&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="2167" number="1">1443761586.55890.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[43/49] - &quot;bones.s10e22.dvdrip.x264-reward.srr&quot; yEnc (1/1)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="122388" number="1">1443761586.58653.1@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[44/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol00+01.par2&quot; yEnc (1/2)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793209" number="1">1443761586.60063.1@reader.easyusenet.nl</segment>
+  <segment bytes="19135" number="2">1443761586.60746.2@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[45/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol01+02.par2&quot; yEnc (1/3)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793199" number="1">1443761586.60831.1@reader.easyusenet.nl</segment>
+  <segment bytes="793118" number="2">1443761586.61222.2@reader.easyusenet.nl</segment>
+  <segment bytes="37224" number="3">1443761586.65080.3@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761587" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[46/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol03+04.par2&quot; yEnc (1/5)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793389" number="1">1443761586.67318.1@reader.easyusenet.nl</segment>
+  <segment bytes="793159" number="2">1443761586.69576.2@reader.easyusenet.nl</segment>
+  <segment bytes="793251" number="3">1443761586.71246.3@reader.easyusenet.nl</segment>
+  <segment bytes="793058" number="4">1443761586.75198.4@reader.easyusenet.nl</segment>
+  <segment bytes="55393" number="5">1443761586.76655.5@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761586" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[47/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol07+08.par2&quot; yEnc (1/9)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793291" number="1">1443761586.78978.1@reader.easyusenet.nl</segment>
+  <segment bytes="793293" number="2">1443761586.80855.2@reader.easyusenet.nl</segment>
+  <segment bytes="793352" number="3">1443761586.82734.3@reader.easyusenet.nl</segment>
+  <segment bytes="793225" number="4">1443761586.83928.4@reader.easyusenet.nl</segment>
+  <segment bytes="793145" number="5">1443761586.84860.5@reader.easyusenet.nl</segment>
+  <segment bytes="793305" number="6">1443761586.86698.6@reader.easyusenet.nl</segment>
+  <segment bytes="793337" number="7">1443761586.89009.7@reader.easyusenet.nl</segment>
+  <segment bytes="793399" number="8">1443761586.91065.8@reader.easyusenet.nl</segment>
+  <segment bytes="73717" number="9">1443761586.91564.9@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761587" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[48/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol15+16.par2&quot; yEnc (1/17)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793184" number="1">1443761586.92576.1@reader.easyusenet.nl</segment>
+  <segment bytes="793322" number="2">1443761586.93966.2@reader.easyusenet.nl</segment>
+  <segment bytes="793110" number="3">1443761586.95122.3@reader.easyusenet.nl</segment>
+  <segment bytes="793359" number="4">1443761586.95514.4@reader.easyusenet.nl</segment>
+  <segment bytes="793322" number="5">1443761586.97316.5@reader.easyusenet.nl</segment>
+  <segment bytes="793396" number="6">1443761587.03385.6@reader.easyusenet.nl</segment>
+  <segment bytes="793058" number="7">1443761587.03788.7@reader.easyusenet.nl</segment>
+  <segment bytes="793199" number="8">1443761587.04487.8@reader.easyusenet.nl</segment>
+  <segment bytes="793151" number="9">1443761587.08266.9@reader.easyusenet.nl</segment>
+  <segment bytes="793022" number="10">1443761587.09645.10@reader.easyusenet.nl</segment>
+  <segment bytes="793360" number="11">1443761587.11055.11@reader.easyusenet.nl</segment>
+  <segment bytes="793257" number="12">1443761587.15387.12@reader.easyusenet.nl</segment>
+  <segment bytes="793285" number="13">1443761587.18003.13@reader.easyusenet.nl</segment>
+  <segment bytes="793114" number="14">1443761587.20096.14@reader.easyusenet.nl</segment>
+  <segment bytes="793251" number="15">1443761587.21762.15@reader.easyusenet.nl</segment>
+  <segment bytes="793283" number="16">1443761587.22907.16@reader.easyusenet.nl</segment>
+  <segment bytes="92384" number="17">1443761587.24395.17@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<file poster="r@ndom.tv (r@ndom)" date="1443761587" subject="[274596]-[FULL]-[#a.b.teevee@EFNet]-[ Bones.S10E22.DVDRip.X264-REWARD ]-[49/49] - &quot;bones.s10e22.dvdrip.x264-reward.vol31+21.par2&quot; yEnc (1/22)">
+ <groups>
+  <group>alt.binaries.teevee</group>
+ </groups>
+ <segments>
+  <segment bytes="793313" number="1">1443761587.26435.1@reader.easyusenet.nl</segment>
+  <segment bytes="793299" number="2">1443761587.31653.2@reader.easyusenet.nl</segment>
+  <segment bytes="793087" number="3">1443761587.33498.3@reader.easyusenet.nl</segment>
+  <segment bytes="793277" number="4">1443761587.33935.4@reader.easyusenet.nl</segment>
+  <segment bytes="793239" number="5">1443761587.34338.5@reader.easyusenet.nl</segment>
+  <segment bytes="793355" number="6">1443761587.36049.6@reader.easyusenet.nl</segment>
+  <segment bytes="793506" number="7">1443761587.36740.7@reader.easyusenet.nl</segment>
+  <segment bytes="793229" number="8">1443761587.39166.8@reader.easyusenet.nl</segment>
+  <segment bytes="793485" number="9">1443761587.39552.9@reader.easyusenet.nl</segment>
+  <segment bytes="793094" number="10">1443761587.49811.10@reader.easyusenet.nl</segment>
+  <segment bytes="793229" number="11">1443761587.50505.11@reader.easyusenet.nl</segment>
+  <segment bytes="793191" number="12">1443761587.52068.12@reader.easyusenet.nl</segment>
+  <segment bytes="793339" number="13">1443761587.57471.13@reader.easyusenet.nl</segment>
+  <segment bytes="793270" number="14">1443761587.58938.14@reader.easyusenet.nl</segment>
+  <segment bytes="793422" number="15">1443761587.61183.15@reader.easyusenet.nl</segment>
+  <segment bytes="793270" number="16">1443761587.69497.16@reader.easyusenet.nl</segment>
+  <segment bytes="793163" number="17">1443761587.72012.17@reader.easyusenet.nl</segment>
+  <segment bytes="793261" number="18">1443761587.73421.18@reader.easyusenet.nl</segment>
+  <segment bytes="793472" number="19">1443761587.79784.19@reader.easyusenet.nl</segment>
+  <segment bytes="793286" number="20">1443761587.80449.20@reader.easyusenet.nl</segment>
+  <segment bytes="793216" number="21">1443761587.85560.21@reader.easyusenet.nl</segment>
+  <segment bytes="92716" number="22">1443761587.87728.22@reader.easyusenet.nl</segment>
+ </segments>
+</file>
+<!-- generated by newznab 0.2.3pz -->
+</nzb>

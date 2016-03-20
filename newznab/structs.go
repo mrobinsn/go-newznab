@@ -21,6 +21,25 @@ type NZB struct {
 	SourceEndpoint string `json:"source_endpoint"`
 	SourceAPIKey   string `json:"source_apikey"`
 
+	Category []string `json:"category,omitempty"`
+	Info     string   `json:"info,omitempty"`
+	Genre    string   `json:"genre,omitempty"`
+
+	// TV Specific stuff
+	TVDBID   string `json:"genre,omitempty"`
+	TVRageID string `json:"genre,omitempty"`
+	Season   string `json:"season,omitempty"`
+	Episode  string `json:"episode,omitempty"`
+	TVTitle  string `json:"tvtitle,omitempty"`
+	Rating   int    `json:"tvtitle,omitempty"`
+
+	// Movie Specific stuff
+	IMDBID    string  `json:"imdb,omitempty"`
+	IMDBTitle string  `json:"imdbtitle,omitempty"`
+	IMDBYear  int     `json:"imdbyear,omitempty"`
+	IMDBScore float32 `json:"imdbscore,omitempty"`
+	CoverURL  string  `json:"coverurl,omitempty"`
+
 	// Torznab specific stuff
 	Seeders     int    `json:"seeders,omitempty"`
 	Peers       int    `json:"peers,omitempty"`
@@ -48,8 +67,8 @@ func (c Comment) JSONString() string {
 	return string(jsonString)
 }
 
+// SearchResponse is a RSS version of the response.
 type SearchResponse struct {
-	// RSS version of the response.
 	Version string `xml:"version,attr"`
 	Channel struct {
 		Title string `xml:"title"`
