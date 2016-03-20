@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/DTD/2010/feeds/attributes/">
+    <channel>
+        <title>DOGnzb</title>
+        <description>DOGnzb Feed</description>
+        <uuid>2D7C4D28</uuid>
+        <newznab:response offset="0" total="23" />
+        <item>
+            <title>Iron.Man.2008.1080p.BluRay.DTS.dxva.x264.D-Z0N3</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/60f4e59ffacb2d42662ab04fbc67f857</guid>
+            <link>https://dognzb.cr/fetch/60f4e59ffacb2d42662ab04fbc67f857/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/60f4e59ffacb2d42662ab04fbc67f857#comments</comments>
+            <pubDate>Thu, 24 Dec 2015 18:10:59 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.1080p.BluRay.DTS.dxva.x264.D-Z0N3<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 14.93 GB<br /><b>Post Date:</b> December 24, 2015 6:10 PM<br /><b>Group:</b> alt.binaries.boneless<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/60f4e59ffacb2d42662ab04fbc67f857/d097584317824393f71b88a472575e7a" length="16036058229" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="16036058229" />
+            <newznab:attr name="grabs" value="80" />
+            <newznab:attr name="guid" value="60f4e59ffacb2d42662ab04fbc67f857" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/60f4e59ffacb2d42662ab04fbc67f857" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.BluRay.1080p.TrueHD.h264.Remux-decibeL</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/3e6905e6f2fe41276c3b220d79fad19f</guid>
+            <link>https://dognzb.cr/fetch/3e6905e6f2fe41276c3b220d79fad19f/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/3e6905e6f2fe41276c3b220d79fad19f#comments</comments>
+            <pubDate>Thu, 06 Aug 2015 21:03:01 -0600</pubDate>
+            <category>Movies > BluRay</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.BluRay.1080p.TrueHD.h264.Remux-decibeL<br /><b>Category:</b> Movies > BluRay<br /><b>Size:</b> 31.51 GB<br /><b>Post Date:</b> August 06, 2015 9:03 PM<br /><b>Group:</b> alt.binaries.boneless<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/3e6905e6f2fe41276c3b220d79fad19f/d097584317824393f71b88a472575e7a" length="33837105271" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2050" />
+            <newznab:attr name="size" value="33837105271" />
+            <newznab:attr name="grabs" value="50" />
+            <newznab:attr name="guid" value="3e6905e6f2fe41276c3b220d79fad19f" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/3e6905e6f2fe41276c3b220d79fad19f" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.REPACK.720p.BluRay.x264-SEPTIC</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/17fb55c1f1d8b476859e77d715315a7b</guid>
+            <link>https://dognzb.cr/fetch/17fb55c1f1d8b476859e77d715315a7b/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/17fb55c1f1d8b476859e77d715315a7b#comments</comments>
+            <pubDate>Mon, 06 Jul 2015 02:49:50 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.REPACK.720p.BluRay.x264-SEPTIC<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 5.06 GB<br /><b>Post Date:</b> July 06, 2015 2:49 AM<br /><b>Group:</b> alt.binaries.mom<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/17fb55c1f1d8b476859e77d715315a7b/d097584317824393f71b88a472575e7a" length="5432609282" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="5432609282" />
+            <newznab:attr name="grabs" value="299" />
+            <newznab:attr name="guid" value="17fb55c1f1d8b476859e77d715315a7b" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/17fb55c1f1d8b476859e77d715315a7b" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.BluRay.720p.H264-20-40</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/1e2b6033dbf5eaf1895dc4ba36c30eeb</guid>
+            <link>https://dognzb.cr/fetch/1e2b6033dbf5eaf1895dc4ba36c30eeb/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/1e2b6033dbf5eaf1895dc4ba36c30eeb#comments</comments>
+            <pubDate>Sat, 27 Sep 2014 02:24:16 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.BluRay.720p.H264-20-40<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 867 MB<br /><b>Post Date:</b> September 27, 2014 2:24 AM<br /><b>Group:</b> alt.binaries.multimedia<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/1e2b6033dbf5eaf1895dc4ba36c30eeb/d097584317824393f71b88a472575e7a" length="909322947" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="909322947" />
+            <newznab:attr name="grabs" value="152" />
+            <newznab:attr name="guid" value="1e2b6033dbf5eaf1895dc4ba36c30eeb" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/1e2b6033dbf5eaf1895dc4ba36c30eeb" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.1080p.Rifftrax.6ch.2ch</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/de790f3dd4691ce1df9e2109added5bf</guid>
+            <link>https://dognzb.cr/fetch/de790f3dd4691ce1df9e2109added5bf/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/de790f3dd4691ce1df9e2109added5bf#comments</comments>
+            <pubDate>Thu, 25 Sep 2014 16:44:56 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.1080p.Rifftrax.6ch.2ch<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 3.23 GB<br /><b>Post Date:</b> September 25, 2014 4:44 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/de790f3dd4691ce1df9e2109added5bf/d097584317824393f71b88a472575e7a" length="3472235176" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="3472235176" />
+            <newznab:attr name="grabs" value="77" />
+            <newznab:attr name="guid" value="de790f3dd4691ce1df9e2109added5bf" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/de790f3dd4691ce1df9e2109added5bf" />
+            <newznab:attr name="comments" value="1" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.1080p.Bluray.X264-BARC0DE</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/735c590824cbccb91d1775bfa7cd0a65</guid>
+            <link>https://dognzb.cr/fetch/735c590824cbccb91d1775bfa7cd0a65/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/735c590824cbccb91d1775bfa7cd0a65#comments</comments>
+            <pubDate>Mon, 26 Aug 2013 01:25:22 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.1080p.Bluray.X264-BARC0DE<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 10.49 GB<br /><b>Post Date:</b> August 26, 2013 1:25 AM<br /><b>Group:</b> alt.binaries.movies<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/735c590824cbccb91d1775bfa7cd0a65/d097584317824393f71b88a472575e7a" length="11262901413" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="11262901413" />
+            <newznab:attr name="grabs" value="241" />
+            <newznab:attr name="guid" value="735c590824cbccb91d1775bfa7cd0a65" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/735c590824cbccb91d1775bfa7cd0a65" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.720p.BrRip.x264.YIFY</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/bc6aadf45d5a3a98fa7105ae54720074</guid>
+            <link>https://dognzb.cr/fetch/bc6aadf45d5a3a98fa7105ae54720074/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/bc6aadf45d5a3a98fa7105ae54720074#comments</comments>
+            <pubDate>Mon, 12 Aug 2013 13:36:41 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.720p.BrRip.x264.YIFY<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 855 MB<br /><b>Post Date:</b> August 12, 2013 1:36 PM<br /><b>Group:</b> alt.binaries.movies<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/bc6aadf45d5a3a98fa7105ae54720074/d097584317824393f71b88a472575e7a" length="896114843" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="896114843" />
+            <newznab:attr name="grabs" value="91" />
+            <newznab:attr name="guid" value="bc6aadf45d5a3a98fa7105ae54720074" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/bc6aadf45d5a3a98fa7105ae54720074" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.(2008).720p.x264-Petje</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/f9787a17d9e94748fa40587fda0d0112</guid>
+            <link>https://dognzb.cr/fetch/f9787a17d9e94748fa40587fda0d0112/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/f9787a17d9e94748fa40587fda0d0112#comments</comments>
+            <pubDate>Mon, 14 Jan 2013 10:01:55 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.(2008).720p.x264-Petje<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 3.38 GB<br /><b>Post Date:</b> January 14, 2013 10:01 AM<br /><b>Group:</b> alt.binaries.misc<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/f9787a17d9e94748fa40587fda0d0112/d097584317824393f71b88a472575e7a" length="3625721815" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="3625721815" />
+            <newznab:attr name="grabs" value="98" />
+            <newznab:attr name="guid" value="f9787a17d9e94748fa40587fda0d0112" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/f9787a17d9e94748fa40587fda0d0112" />
+            <newznab:attr name="comments" value="1" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.1080p.BluRay.x264-EbP</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/bf73bec6ef2886dbbd1df63818c9669b</guid>
+            <link>https://dognzb.cr/fetch/bf73bec6ef2886dbbd1df63818c9669b/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/bf73bec6ef2886dbbd1df63818c9669b#comments</comments>
+            <pubDate>Mon, 16 Jul 2012 18:29:35 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.1080p.BluRay.x264-EbP<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 13.77 GB<br /><b>Post Date:</b> July 16, 2012 6:29 PM<br /><b>Group:</b> alt.binaries.nospam.cheerleaders<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/bf73bec6ef2886dbbd1df63818c9669b/d097584317824393f71b88a472575e7a" length="14783503005" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="14783503005" />
+            <newznab:attr name="grabs" value="88" />
+            <newznab:attr name="guid" value="bf73bec6ef2886dbbd1df63818c9669b" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/bf73bec6ef2886dbbd1df63818c9669b" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.720p.BluRay.x264-EbP</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/509c2b7235403aedec794817cf3f7f21</guid>
+            <link>https://dognzb.cr/fetch/509c2b7235403aedec794817cf3f7f21/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/509c2b7235403aedec794817cf3f7f21#comments</comments>
+            <pubDate>Mon, 16 Jul 2012 17:58:47 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.720p.BluRay.x264-EbP<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 6.46 GB<br /><b>Post Date:</b> July 16, 2012 5:58 PM<br /><b>Group:</b> alt.binaries.nospam.cheerleaders<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/509c2b7235403aedec794817cf3f7f21/d097584317824393f71b88a472575e7a" length="6933336475" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="6933336475" />
+            <newznab:attr name="grabs" value="104" />
+            <newznab:attr name="guid" value="509c2b7235403aedec794817cf3f7f21" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/509c2b7235403aedec794817cf3f7f21" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.BluRay.720p.x264.DTS-WiKi</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/adf675425e7224ee4757982c06a97cdb</guid>
+            <link>https://dognzb.cr/fetch/adf675425e7224ee4757982c06a97cdb/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/adf675425e7224ee4757982c06a97cdb#comments</comments>
+            <pubDate>Thu, 24 May 2012 11:47:57 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.BluRay.720p.x264.DTS-WiKi<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 7.16 GB<br /><b>Post Date:</b> May 24, 2012 11:47 AM<br /><b>Group:</b> alt.binaries.nospam.cheerleaders<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/adf675425e7224ee4757982c06a97cdb/d097584317824393f71b88a472575e7a" length="7690658502" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="7690658502" />
+            <newznab:attr name="grabs" value="372" />
+            <newznab:attr name="guid" value="adf675425e7224ee4757982c06a97cdb" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/adf675425e7224ee4757982c06a97cdb" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.1.2008.1080p.BluRay.DTS.x264-CyTSuNee-1</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/808d6e9d7bcc39f5192b144dd8277eb2</guid>
+            <link>https://dognzb.cr/fetch/808d6e9d7bcc39f5192b144dd8277eb2/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/808d6e9d7bcc39f5192b144dd8277eb2#comments</comments>
+            <pubDate>Thu, 08 Mar 2012 23:56:26 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.1.2008.1080p.BluRay.DTS.x264-CyTSuNee-1<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 1.77 GB<br /><b>Post Date:</b> March 08, 2012 11:56 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/808d6e9d7bcc39f5192b144dd8277eb2/d097584317824393f71b88a472575e7a" length="1904042092" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="1904042092" />
+            <newznab:attr name="grabs" value="28" />
+            <newznab:attr name="guid" value="808d6e9d7bcc39f5192b144dd8277eb2" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/808d6e9d7bcc39f5192b144dd8277eb2" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.1.2008.1080p.BluRay.DTS.x264-CyTSuNee</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/cbf239bf510351c397c2bbe097872977</guid>
+            <link>https://dognzb.cr/fetch/cbf239bf510351c397c2bbe097872977/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/cbf239bf510351c397c2bbe097872977#comments</comments>
+            <pubDate>Wed, 07 Mar 2012 21:56:18 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.1.2008.1080p.BluRay.DTS.x264-CyTSuNee<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 1.67 GB<br /><b>Post Date:</b> March 07, 2012 9:56 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/cbf239bf510351c397c2bbe097872977/d097584317824393f71b88a472575e7a" length="1798429419" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="1798429419" />
+            <newznab:attr name="grabs" value="17" />
+            <newznab:attr name="guid" value="cbf239bf510351c397c2bbe097872977" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/cbf239bf510351c397c2bbe097872977" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.720p.BluRay.x264-EbP</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/2507c9acb98525d774ff45d0f93fa6b9</guid>
+            <link>https://dognzb.cr/fetch/2507c9acb98525d774ff45d0f93fa6b9/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/2507c9acb98525d774ff45d0f93fa6b9#comments</comments>
+            <pubDate>Tue, 06 Mar 2012 19:58:22 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.720p.BluRay.x264-EbP<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 6.73 GB<br /><b>Post Date:</b> March 06, 2012 7:58 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/2507c9acb98525d774ff45d0f93fa6b9/d097584317824393f71b88a472575e7a" length="7226487975" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="7226487975" />
+            <newznab:attr name="grabs" value="19" />
+            <newznab:attr name="guid" value="2507c9acb98525d774ff45d0f93fa6b9" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/2507c9acb98525d774ff45d0f93fa6b9" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.MULTi.1080p.BluRay.x264-ForceBleue</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/172636c4e56926217b60a88ffa36ff73</guid>
+            <link>https://dognzb.cr/fetch/172636c4e56926217b60a88ffa36ff73/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/172636c4e56926217b60a88ffa36ff73#comments</comments>
+            <pubDate>Wed, 04 Jan 2012 17:05:31 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.MULTi.1080p.BluRay.x264-ForceBleue<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 9.06 GB<br /><b>Post Date:</b> January 04, 2012 5:05 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/172636c4e56926217b60a88ffa36ff73/d097584317824393f71b88a472575e7a" length="9723783596" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="9723783596" />
+            <newznab:attr name="grabs" value="17" />
+            <newznab:attr name="guid" value="172636c4e56926217b60a88ffa36ff73" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/172636c4e56926217b60a88ffa36ff73" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.REPACK.720p.BluRay.x264-SEPTiC</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/2010144da8b34cbda995d9b17badea44</guid>
+            <link>https://dognzb.cr/fetch/2010144da8b34cbda995d9b17badea44/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/2010144da8b34cbda995d9b17badea44#comments</comments>
+            <pubDate>Wed, 24 Aug 2011 04:34:58 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.REPACK.720p.BluRay.x264-SEPTiC<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 5.02 GB<br /><b>Post Date:</b> August 24, 2011 4:34 AM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/2010144da8b34cbda995d9b17badea44/d097584317824393f71b88a472575e7a" length="5384951972" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="5384951972" />
+            <newznab:attr name="grabs" value="69" />
+            <newznab:attr name="guid" value="2010144da8b34cbda995d9b17badea44" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/2010144da8b34cbda995d9b17badea44" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.REPACK.1080p.BluRay.x264-1920-1</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/e7a3c13037a8a09d1325152f5fe94321</guid>
+            <link>https://dognzb.cr/fetch/e7a3c13037a8a09d1325152f5fe94321/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/e7a3c13037a8a09d1325152f5fe94321#comments</comments>
+            <pubDate>Mon, 07 Mar 2011 21:54:36 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.REPACK.1080p.BluRay.x264-1920-1<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 9.05 GB<br /><b>Post Date:</b> March 07, 2011 9:54 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/e7a3c13037a8a09d1325152f5fe94321/d097584317824393f71b88a472575e7a" length="9718315490" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="9718315490" />
+            <newznab:attr name="grabs" value="197" />
+            <newznab:attr name="guid" value="e7a3c13037a8a09d1325152f5fe94321" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/e7a3c13037a8a09d1325152f5fe94321" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.1080p.BluRay.x264-EbP</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/10abdf3cb4b2f2c5627a43cafb8149b6</guid>
+            <link>https://dognzb.cr/fetch/10abdf3cb4b2f2c5627a43cafb8149b6/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/10abdf3cb4b2f2c5627a43cafb8149b6#comments</comments>
+            <pubDate>Mon, 24 May 2010 23:12:56 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.1080p.BluRay.x264-EbP<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 13.51 GB<br /><b>Post Date:</b> May 24, 2010 11:12 PM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/10abdf3cb4b2f2c5627a43cafb8149b6/d097584317824393f71b88a472575e7a" length="14507475966" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="14507475966" />
+            <newznab:attr name="grabs" value="21" />
+            <newznab:attr name="guid" value="10abdf3cb4b2f2c5627a43cafb8149b6" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/10abdf3cb4b2f2c5627a43cafb8149b6" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.REPACK.720p.BluRay.x264-SEPTiC-1</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/ae493b815733c7d9a1168a63b723db7b</guid>
+            <link>https://dognzb.cr/fetch/ae493b815733c7d9a1168a63b723db7b/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/ae493b815733c7d9a1168a63b723db7b#comments</comments>
+            <pubDate>Sat, 01 May 2010 20:07:49 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.REPACK.720p.BluRay.x264-SEPTiC-1<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 4.75 GB<br /><b>Post Date:</b> May 01, 2010 8:07 PM<br /><b>Group:</b> alt.binaries.x<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/ae493b815733c7d9a1168a63b723db7b/d097584317824393f71b88a472575e7a" length="5099883248" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="5099883248" />
+            <newznab:attr name="grabs" value="23" />
+            <newznab:attr name="guid" value="ae493b815733c7d9a1168a63b723db7b" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/ae493b815733c7d9a1168a63b723db7b" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.Bluray.VC1.1080p.5.1.WMV-IGUANA</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/d5f9ba7bb48b460a1106a637e15ca0c2</guid>
+            <link>https://dognzb.cr/fetch/d5f9ba7bb48b460a1106a637e15ca0c2/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/d5f9ba7bb48b460a1106a637e15ca0c2#comments</comments>
+            <pubDate>Sat, 01 May 2010 13:52:50 -0600</pubDate>
+            <category>Movies > BluRay</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.Bluray.VC1.1080p.5.1.WMV-IGUANA<br /><b>Category:</b> Movies > BluRay<br /><b>Size:</b> 12.46 GB<br /><b>Post Date:</b> May 01, 2010 1:52 PM<br /><b>Group:</b> alt.binaries.games.xbox360<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/d5f9ba7bb48b460a1106a637e15ca0c2/d097584317824393f71b88a472575e7a" length="13376184049" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2050" />
+            <newznab:attr name="size" value="13376184049" />
+            <newznab:attr name="grabs" value="11" />
+            <newznab:attr name="guid" value="d5f9ba7bb48b460a1106a637e15ca0c2" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/d5f9ba7bb48b460a1106a637e15ca0c2" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.720p.BluRay.DTS.x264-ESiR</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/db1ad43e2a0e5595942065e974a6692c</guid>
+            <link>https://dognzb.cr/fetch/db1ad43e2a0e5595942065e974a6692c/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/db1ad43e2a0e5595942065e974a6692c#comments</comments>
+            <pubDate>Sat, 13 Mar 2010 18:12:43 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.720p.BluRay.DTS.x264-ESiR<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 7.12 GB<br /><b>Post Date:</b> March 13, 2010 6:12 PM<br /><b>Group:</b> alt.binaries.x<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/db1ad43e2a0e5595942065e974a6692c/d097584317824393f71b88a472575e7a" length="7648035691" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="7648035691" />
+            <newznab:attr name="grabs" value="16" />
+            <newznab:attr name="guid" value="db1ad43e2a0e5595942065e974a6692c" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/db1ad43e2a0e5595942065e974a6692c" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008.720p.BluRay.DTS.x264-ESiR</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/ebf4f669570150abf98c985b3d8e1ade</guid>
+            <link>https://dognzb.cr/fetch/ebf4f669570150abf98c985b3d8e1ade/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/ebf4f669570150abf98c985b3d8e1ade#comments</comments>
+            <pubDate>Sun, 21 Feb 2010 05:01:54 -0600</pubDate>
+            <category>Movies > HD</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008.720p.BluRay.DTS.x264-ESiR<br /><b>Category:</b> Movies > HD<br /><b>Size:</b> 7.12 GB<br /><b>Post Date:</b> February 21, 2010 5:01 AM<br /><b>Group:</b> alt.binaries.hdtv.x264<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/ebf4f669570150abf98c985b3d8e1ade/d097584317824393f71b88a472575e7a" length="7640896288" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2040" />
+            <newznab:attr name="size" value="7640896288" />
+            <newznab:attr name="grabs" value="9" />
+            <newznab:attr name="guid" value="ebf4f669570150abf98c985b3d8e1ade" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/ebf4f669570150abf98c985b3d8e1ade" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+        <item>
+            <title>Iron.Man.2008-uncut.-.AVCHD-1080p.Ge</title>
+            <guid isPermaLink="true">https://dognzb.cr/details/025d1707973c446eec4c92ca639cb84c</guid>
+            <link>https://dognzb.cr/fetch/025d1707973c446eec4c92ca639cb84c/d097584317824393f71b88a472575e7a</link>
+            <comments>https://dognzb.cr/details/025d1707973c446eec4c92ca639cb84c#comments</comments>
+            <pubDate>Fri, 20 Mar 2009 18:12:12 -0600</pubDate>
+            <category>Movies > BluRay</category>
+            <description>
+                <![CDATA[
+                              <div class="row-fluid"><table cellpadding=0 cellspacing=0><tr valign="top"><td width=110><img style="margin-left:10px; margin-bottom:10px; float:right;" src="http://dognzb.cr/content/covers/movies/thumbs/371746.jpg" border="0" /></td><td><b>Name:</b> Iron.Man.2008-uncut.-.AVCHD-1080p.Ge<br /><b>Category:</b> Movies > BluRay<br /><b>Size:</b> 8.47 GB<br /><b>Post Date:</b> March 20, 2009 6:12 PM<br /><b>Group:</b> alt.binaries.blu-ray<br /><b>Year:</b> 2008<br /><b>Rating:</b> 86<br /><b>Genre:</b> Action,  Science Fiction,  Adventure<br /> 
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              ]]>
+            </description>
+            <enclosure url="https://dognzb.cr/fetch/025d1707973c446eec4c92ca639cb84c/d097584317824393f71b88a472575e7a" length="9093026102" type="application/x-nzb" />
+            <newznab:attr name="category" value="2000" />
+            <newznab:attr name="category" value="2050" />
+            <newznab:attr name="size" value="9093026102" />
+            <newznab:attr name="grabs" value="5" />
+            <newznab:attr name="guid" value="025d1707973c446eec4c92ca639cb84c" />
+            <newznab:attr name="info" value="https://dognzb.cr/details/025d1707973c446eec4c92ca639cb84c" />
+            <newznab:attr name="comments" value="0" />
+            <newznab:attr name="imdb" value="0371746" />
+            <newznab:attr name="imdbtitle" value="Iron Man" />
+            <newznab:attr name="imdbyear" value="2008" />
+            <newznab:attr name="imdbscore" value="7.9" />
+            <newznab:attr name="genre" value="Action,  Science Fiction,  Adventure" />
+            <newznab:attr name="coverurl" value="https://dognzb.cr/content/covers/movies/thumbs/371746.jpg" />
+                                      
+                        
+        </item>
+                        
+                        
+    </channel>
+                        
+</rss>

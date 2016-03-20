@@ -67,8 +67,8 @@ func (c Comment) JSONString() string {
 	return string(jsonString)
 }
 
+// SearchResponse is a RSS version of the response.
 type SearchResponse struct {
-	// RSS version of the response.
 	Version string `xml:"version,attr"`
 	Channel struct {
 		Title string `xml:"title"`

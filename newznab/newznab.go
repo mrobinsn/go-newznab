@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"strings"
 	"time"
 
 	log "github.com/Sirupsen/logrus"
@@ -70,10 +71,10 @@ func New(baseURL string, apikey string, insecure bool) Client {
 }
 
 // SearchWithTVRage returns NZBs for the given parameters
-func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode int) ([]NZB, error) {
+func (c Client) SearchWithTVRage(categories []int, tvRageID int, season int, episode int) ([]NZB, error) {
 	return c.search(url.Values{
 		"rid":     []string{strconv.Itoa(tvRageID)},
-		"cat":     []string{strconv.Itoa(category)},
+		"cat":     c.splitCats(categories),
 		"season":  []string{strconv.Itoa(season)},
 		"episode": []string{strconv.Itoa(episode)},
 		"t":       []string{"tvsearch"},
@@ -81,10 +82,10 @@ func (c Client) SearchWithTVRage(category int, tvRageID int, season int, episode
 }
 
 // SearchWithTVDB returns NZBs for the given parameters
-func (c Client) SearchWithTVDB(category int, tvDBID int, season int, episode int) ([]NZB, error) {
+func (c Client) SearchWithTVDB(categories []int, tvDBID int, season int, episode int) ([]NZB, error) {
 	return c.search(url.Values{
 		"tvdbid":  []string{strconv.Itoa(tvDBID)},
-		"cat":     []string{strconv.Itoa(category)},
+		"cat":     c.splitCats(categories),
 		"season":  []string{strconv.Itoa(season)},
 		"episode": []string{strconv.Itoa(episode)},
 		"t":       []string{"tvsearch"},
@@ -92,23 +93,31 @@ func (c Client) SearchWithTVDB(category int, tvDBID int, season int, episode int
 }
 
 // SearchWithIMDB returns NZBs for the given parameters
-func (c Client) SearchWithIMDB(category int, imdbID string) ([]NZB, error) {
+func (c Client) SearchWithIMDB(categories []int, imdbID string) ([]NZB, error) {
 	return c.search(url.Values{
 		"imdbid": []string{imdbID},
-		"cat":    []string{strconv.Itoa(category)},
+		"cat":    c.splitCats(categories),
 		"t":      []string{"movie"},
 	})
 }
 
 // SearchWithQuery returns NZBs for the given parameters
-func (c Client) SearchWithQuery(category int, query string, searchType string) ([]NZB, error) {
+func (c Client) SearchWithQuery(categories []int, query string, searchType string) ([]NZB, error) {
 	return c.search(url.Values{
 		"q":   []string{query},
-		"cat": []string{strconv.Itoa(category)},
+		"cat": c.splitCats(categories),
 		"t":   []string{searchType},
 	})
 }
 
+func (c Client) splitCats(cats []int) []string {
+	var categories, catsOut []string
+	for _, v := range cats {
+		categories = append(categories, strconv.Itoa(v))
+	}
+	catsOut = append(catsOut, strings.Join(categories, ","))
+	return catsOut
+}
 func (c Client) search(vals url.Values) ([]NZB, error) {
 	vals.Set("apikey", c.apikey)
 	//vals.Set("t", "tvsearch")
