@@ -51,7 +51,7 @@ func TestUsenetCrawlerClient(t *testing.T) {
 	defer ts.Close()
 
 	Convey("I have setup a torznab client", t, func() {
-		client := New(ts.URL+"/api", apiKey, true)
+		client := New(ts.URL, apiKey, 1234, true)
 
 		Convey("I can search using simple query", func() {
 			categories := []int{CategoryTVHD}
@@ -66,7 +66,7 @@ func TestUsenetCrawlerClient(t *testing.T) {
 	})
 
 	Convey("I have setup a nzb client", t, func() {
-		client := New(ts.URL+"/api", apiKey, false)
+		client := New(ts.URL, apiKey, 1234, false)
 		categories := []int{CategoryTVSD}
 
 		Convey("Handle errors", func() {
@@ -191,6 +191,58 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 						So(imdbAttr, ShouldEqual, "https://dognzb.cr/content/covers/movies/thumbs/364569.jpg")
 					})
+				})
+			})
+		})
+
+		Convey("When getting recent items via RSS", func() {
+			num := 50
+			categories := []int{CategoryMovieAll, CategoryTVAll}
+
+			Convey("I can load the current RSS feed.", func() {
+				results, err := client.LoadRSSFeed(categories, num)
+
+				Convey("A valid result is returned.", func() {
+					So(err, ShouldBeNil)
+					So(len(results), ShouldEqual, num)
+				})
+
+				Convey("A TV result is present.", func() {
+					guid := results[0].ID
+					So(guid, ShouldEqual, "bcdbf3f1e7a1ef964527f1d40d5ec639")
+				})
+
+				Convey("A Movie result is present.", func() {
+					title := results[6].Title
+					So(title, ShouldEqual, "030517-VSHS0101720WDA20H264V")
+				})
+
+			})
+
+			Convey("I can load the RSS feed up to a given NZB ID.", func() {
+				results, err := client.LoadRSSFeedUntilNZBID(categories, num, "29527a54ac54bb7533abacd7dad66a6a", 0)
+
+				Convey("A valid result is returned.", func() {
+					So(err, ShouldBeNil)
+					So(len(results), ShouldEqual, 101)
+				})
+
+				Convey("Everything up to the given ID is returned.", func() {
+					firstID := results[0].ID
+					So(firstID, ShouldEqual, "8841b21c4d2fb96f0d47ca24cae9a5b7")
+
+					lastID := results[len(results)-1].ID
+					So(lastID, ShouldEqual, "2c6c0e2ac562db69d8b3646deaf2d0cd")
+				})
+			})
+
+			Convey("I can load the RSS feed up to a given NZB ID but will stop after N tries", func() {
+
+				results, err := client.LoadRSSFeedUntilNZBID(categories, num, "does-not-exist", 2)
+
+				Convey("100 results with 2 requests were fetched.", func() {
+					So(err, ShouldBeNil)
+					So(len(results), ShouldEqual, 100)
 				})
 			})
 		})

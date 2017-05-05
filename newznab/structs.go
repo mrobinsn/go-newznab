@@ -14,6 +14,7 @@ type NZB struct {
 	Size        int64     `json:"size,omitempty"`
 	AirDate     time.Time `json:"air_date,omitempty"`
 	PubDate     time.Time `json:"pub_date,omitempty"`
+	UsenetDate  time.Time `json:"usenet_date,omitempty"`
 	NumGrabs    int       `json:"num_grabs,omitempty"`
 	NumComments int       `json:"num_comments,omitempty"`
 	Comments    []Comment `json:"comments,omitempty"`

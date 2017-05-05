@@ -50,14 +50,16 @@ const (
 type Client struct {
 	apikey     string
 	apiBaseURL string
+	apiUserID  int
 	client     *http.Client
 }
 
 // New returns a new instance of Client
-func New(baseURL string, apikey string, insecure bool) Client {
+func New(baseURL string, apikey string, userID int, insecure bool) Client {
 	ret := Client{
 		apikey:     apikey,
 		apiBaseURL: baseURL,
+		apiUserID:  userID,
 	}
 	if insecure {
 		ret.client = &http.Client{
@@ -110,6 +112,43 @@ func (c Client) SearchWithQuery(categories []int, query string, searchType strin
 	})
 }
 
+// LoadRSSFeed returns up to <num> of the most recent NZBs of the given categories.
+func (c Client) LoadRSSFeed(categories []int, num int) ([]NZB, error) {
+	return c.rss(url.Values{
+		"num": []string{strconv.Itoa(num)},
+		"t":   c.splitCats(categories),
+		"dl":  []string{"1"},
+	})
+}
+
+// LoadRSSFeedUntilNZBID fetches NZBs until a given NZB id is reached.
+func (c Client) LoadRSSFeedUntilNZBID(categories []int, num int, id string, maxRequests int) ([]NZB, error) {
+	count := 0
+	var nzbs []NZB
+	for {
+		partition, err := c.rss(url.Values{
+			"num":    []string{strconv.Itoa(num)},
+			"t":      c.splitCats(categories),
+			"dl":     []string{"1"},
+			"offset": []string{strconv.Itoa(num * count)},
+		})
+		count++
+		if err != nil {
+			return nil, err
+		}
+		for k, nzb := range partition {
+			if nzb.ID == id {
+				return append(nzbs, partition[:k]...), nil
+			}
+		}
+		nzbs = append(nzbs, partition...)
+		if maxRequests != 0 && count == maxRequests {
+			break
+		}
+	}
+	return nzbs, nil
+}
+
 func (c Client) splitCats(cats []int) []string {
 	var categories, catsOut []string
 	for _, v := range cats {
@@ -118,12 +157,22 @@ func (c Client) splitCats(cats []int) []string {
 	catsOut = append(catsOut, strings.Join(categories, ","))
 	return catsOut
 }
+
+func (c Client) rss(vals url.Values) ([]NZB, error) {
+	vals.Set("r", c.apikey)
+	vals.Set("i", strconv.Itoa(c.apiUserID))
+	return c.process(vals, rssPath)
+}
+
 func (c Client) search(vals url.Values) ([]NZB, error) {
 	vals.Set("apikey", c.apikey)
-	//vals.Set("t", "tvsearch")
+	return c.process(vals, apiPath)
+}
+
+func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 	var nzbs []NZB
 	log.Debug("newznab:Client:Search: searching")
-	resp, err := c.getURL(c.buildURL(vals))
+	resp, err := c.getURL(c.buildURL(vals, path))
 	if err != nil {
 		return nzbs, err
 	}
@@ -132,7 +181,7 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 	if err != nil {
 		return nil, err
 	}
-	log.WithField("num", len(feed.Channel.NZBs)).Info("newznab:Client:Search: found NZBs")
+	log.WithField("num", len(feed.Channel.NZBs)).Debug("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
 			Title:          gotNZB.Title,
@@ -142,7 +191,6 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 			SourceEndpoint: c.apiBaseURL,
 			SourceAPIKey:   c.apikey,
 		}
-
 		for _, attr := range gotNZB.Attributes {
 			switch attr.Name {
 			case "tvairdate":
@@ -204,6 +252,12 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 				nzb.IMDBScore = float32(parsedFloat)
 			case "coverurl":
 				nzb.CoverURL = attr.Value
+			case "usenetdate":
+				if parsedUsetnetDate, err := time.Parse(time.RFC1123Z, attr.Value); err != nil {
+					log.Errorf("newznab:Client:Search: failed to parse date: %v: %v", attr.Value, err)
+				} else {
+					nzb.UsenetDate = parsedUsetnetDate
+				}
 			default:
 				log.WithFields(log.Fields{
 					"name":  attr.Name,
@@ -226,7 +280,7 @@ func (c Client) PopulateComments(nzb *NZB) error {
 		"t":      []string{"comments"},
 		"id":     []string{nzb.ID},
 		"apikey": []string{c.apikey},
-	}))
+	}, apiPath))
 	if err != nil {
 		return err
 	}
@@ -260,7 +314,7 @@ func (c Client) NZBDownloadURL(nzb NZB) string {
 		"t":      []string{"get"},
 		"id":     []string{nzb.ID},
 		"apikey": []string{c.apikey},
-	})
+	}, apiPath)
 }
 
 // DownloadNZB returns the bytes of the actual NZB file for the given NZB
@@ -287,8 +341,8 @@ func (c Client) getURL(url string) ([]byte, error) {
 	return data, nil
 }
 
-func (c Client) buildURL(vals url.Values) string {
-	parsedURL, err := url.Parse(c.apiBaseURL)
+func (c Client) buildURL(vals url.Values, path string) string {
+	parsedURL, err := url.Parse(c.apiBaseURL + path)
 	if err != nil {
 		log.WithError(err).Error("failed to parse base API url")
 		return ""
@@ -297,6 +351,11 @@ func (c Client) buildURL(vals url.Values) string {
 	parsedURL.RawQuery = vals.Encode()
 	return parsedURL.String()
 }
+
+const (
+	apiPath = "/api"
+	rssPath = "/rss"
+)
 
 type commentResponse struct {
 	Channel struct {

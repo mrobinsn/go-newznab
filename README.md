@@ -11,6 +11,7 @@ https://godoc.org/github.com/mrobinsn/go-newznab/newznab
 - Get comments for a NZB
 - Get NZB download URL
 - Download NZB
+- Get latest releases via RSS
 
 ## Installation
 To install the package run `go get github.com/mrobinsn/go-newznab`
@@ -20,7 +21,7 @@ To use it in your application, import `github.com/mrobinsn/go-newznab/newznab`
 
 Initialize a client:
 ```
-client := newznab.New("http://my-usenet-indexer/api", "my-api-key", false)
+client := newznab.New("http://my-usenet-indexer/api", "my-api-key", 1234, false)
 
 ```
 
@@ -50,6 +51,16 @@ results, _ := client.SearchWithQueries(categories, "Oldboy", "movie")
 Get latest releases for set of categories:
 ```
 results, _ := client.SearchWithQuery(categories, "", "movie")
+```
+
+Load latest releases via RSS:
+```
+results, _ := client.LoadRSSFeed(categories, 50)
+```
+
+Load latest releases via RSS up to a given NZB id:
+```
+results, _ := client.LoadRSSFeedUntilNZBID(categories, 50, "nzb-guid", 15)
 ```
 
 ## Contributing
