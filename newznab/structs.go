@@ -70,8 +70,10 @@ func (c Comment) JSONString() string {
 
 // SearchResponse is a RSS version of the response.
 type SearchResponse struct {
-	Version string `xml:"version,attr"`
-	Channel struct {
+	Version   string `xml:"version,attr"`
+	ErrorCode int    `xml:"code,attr"`
+	ErrorDesc string `xml:"description,attr"`
+	Channel   struct {
 		Title string `xml:"title"`
 		Link  struct {
 			Href string `xml:"href,attr"`

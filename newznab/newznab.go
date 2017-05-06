@@ -10,6 +10,8 @@ import (
 	"strings"
 	"time"
 
+	"fmt"
+
 	log "github.com/Sirupsen/logrus"
 )
 
@@ -181,6 +183,9 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 	if err != nil {
 		return nil, err
 	}
+	if feed.ErrorCode != 0 {
+		return nil, fmt.Errorf("newznab api error %d: %s", feed.ErrorCode, feed.ErrorDesc)
+	}
 	log.WithField("num", len(feed.Channel.NZBs)).Debug("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
@@ -194,8 +199,8 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 		for _, attr := range gotNZB.Attributes {
 			switch attr.Name {
 			case "tvairdate":
-				if parsedAirDate, err := time.Parse(time.RFC1123Z, attr.Value); err != nil {
-					log.Errorf("newznab:Client:Search: failed to parse date: %v: %v", attr.Value, err)
+				if parsedAirDate, err := parseDate(attr.Value); err != nil {
+					log.Errorf("newznab:Client:Search: failed to parse tvairdate: %v", err)
 				} else {
 					nzb.AirDate = parsedAirDate
 				}
@@ -253,8 +258,8 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 			case "coverurl":
 				nzb.CoverURL = attr.Value
 			case "usenetdate":
-				if parsedUsetnetDate, err := time.Parse(time.RFC1123Z, attr.Value); err != nil {
-					log.Errorf("newznab:Client:Search: failed to parse date: %v: %v", attr.Value, err)
+				if parsedUsetnetDate, err := parseDate(attr.Value); err != nil {
+					log.Errorf("newznab:Client:Search: failed to parse usenetdate: %v", err)
 				} else {
 					nzb.UsenetDate = parsedUsetnetDate
 				}
@@ -350,6 +355,18 @@ func (c Client) buildURL(vals url.Values, path string) string {
 
 	parsedURL.RawQuery = vals.Encode()
 	return parsedURL.String()
+}
+
+func parseDate(date string) (time.Time, error) {
+	formats := []string{time.RFC3339, time.RFC1123Z}
+	var parsedTime time.Time
+	var err error
+	for _, format := range formats {
+		if parsedTime, err = time.Parse(format, date); err == nil {
+			return parsedTime, nil
+		}
+	}
+	return parsedTime, fmt.Errorf("failed to parse date %s as one of %s", date, strings.Join(formats, ", "))
 }
 
 const (

@@ -71,9 +71,14 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 		Convey("Handle errors", func() {
 
-			Convey("Return an error for an invalid search", func() {
+			Convey("Return an error for an invalid search.", func() {
 				_, err := client.SearchWithTVDB(categories, 1234, 9, 2)
 				So(err, ShouldNotBeNil)
+			})
+
+			Convey("Return an error for invalid api usage.", func() {
+				_, err := client.SearchWithTVDB(categories, 5678, 9, 2)
+				So(err.Error(), ShouldEqual, "newznab api error 100: Invalid API Key")
 			})
 		})
 
@@ -90,10 +95,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 			Convey("When given a category and a tvrage id", func() {
 				results, err := client.SearchWithTVRage(categories, 2870, 10, 1)
-
-				//for _, result := range results {
-				//	log.Info(result.JSONString())
-				//}
 
 				Convey("A valid result is returned.", func() {
 					So(err, ShouldBeNil)
@@ -136,8 +137,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 		})
 
 		Convey("When getting movie information", func() {
-			categories := []int{CategoryMovieHD}
-
 			Convey("Given multiple categories and an IMDB id", func() {
 				cats := []int{
 					CategoryMovieHD,
@@ -155,7 +154,8 @@ func TestUsenetCrawlerClient(t *testing.T) {
 			})
 
 			Convey("Given a single category and an IMDB id", func() {
-				results, err := client.SearchWithIMDB(categories, "0364569")
+				cats := []int{CategoryMovieHD}
+				results, err := client.SearchWithIMDB(cats, "0364569")
 
 				So(err, ShouldBeNil)
 				So(len(results), ShouldBeGreaterThan, 0)
@@ -164,31 +164,26 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 					Convey("An IMDB id.", func() {
 						imdbAttr := results[0].IMDBID
-
 						So(imdbAttr, ShouldEqual, "0364569")
 					})
 
 					Convey("An IMDB title.", func() {
 						imdbAttr := results[0].IMDBTitle
-
 						So(imdbAttr, ShouldEqual, "Oldboy")
 					})
 
 					Convey("An IMDB year.", func() {
 						imdbAttr := results[0].IMDBYear
-
 						So(imdbAttr, ShouldEqual, 2003)
 					})
 
 					Convey("An IMDB score.", func() {
 						imdbAttr := results[0].IMDBScore
-
 						So(imdbAttr, ShouldEqual, 8.4)
 					})
 
 					Convey("A cover URL.", func() {
 						imdbAttr := results[0].CoverURL
-
 						So(imdbAttr, ShouldEqual, "https://dognzb.cr/content/covers/movies/thumbs/364569.jpg")
 					})
 				})
@@ -217,6 +212,16 @@ func TestUsenetCrawlerClient(t *testing.T) {
 					So(title, ShouldEqual, "030517-VSHS0101720WDA20H264V")
 				})
 
+				Convey("An airdate with RFC1123Z format is parsed.", func() {
+					year := results[7].AirDate.Year()
+					So(year, ShouldEqual, 2017)
+				})
+
+				Convey("An usenetdate with RFC3339 format is parsed.", func() {
+					year := results[7].UsenetDate.Year()
+					So(year, ShouldEqual, 2017)
+				})
+
 			})
 
 			Convey("I can load the RSS feed up to a given NZB ID.", func() {
@@ -237,7 +242,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 			})
 
 			Convey("I can load the RSS feed up to a given NZB ID but will stop after N tries", func() {
-
 				results, err := client.LoadRSSFeedUntilNZBID(categories, num, "does-not-exist", 2)
 
 				Convey("100 results with 2 requests were fetched.", func() {
