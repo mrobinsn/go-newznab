@@ -14,6 +14,7 @@ type NZB struct {
 	Size        int64     `json:"size,omitempty"`
 	AirDate     time.Time `json:"air_date,omitempty"`
 	PubDate     time.Time `json:"pub_date,omitempty"`
+	UsenetDate  time.Time `json:"usenet_date,omitempty"`
 	NumGrabs    int       `json:"num_grabs,omitempty"`
 	NumComments int       `json:"num_comments,omitempty"`
 	Comments    []Comment `json:"comments,omitempty"`
@@ -69,8 +70,10 @@ func (c Comment) JSONString() string {
 
 // SearchResponse is a RSS version of the response.
 type SearchResponse struct {
-	Version string `xml:"version,attr"`
-	Channel struct {
+	Version   string `xml:"version,attr"`
+	ErrorCode int    `xml:"code,attr"`
+	ErrorDesc string `xml:"description,attr"`
+	Channel   struct {
 		Title string `xml:"title"`
 		Link  struct {
 			Href string `xml:"href,attr"`
