@@ -148,7 +148,7 @@ type Time struct {
 
 func (t *Time) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	e.EncodeToken(start)
-	e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC822))))
+	e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC1123Z))))
 	e.EncodeToken(xml.EndElement{start.Name})
 	return nil
 }
