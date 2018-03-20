@@ -124,7 +124,7 @@ type RawNZB struct {
 
 	Source struct {
 		URL   string `xml:"url,attr"`
-		Value string `xml:"url,chardata"`
+		Value string `xml:",chardata"`
 	} `xml:"source,omitempty"`
 
 	Date Time `xml:"pubDate,omitempty"`
