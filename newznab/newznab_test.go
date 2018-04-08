@@ -94,7 +94,8 @@ func TestUsenetCrawlerClient(t *testing.T) {
 			})
 
 			t.Run("download url", func(t *testing.T) {
-				url := client.NZBDownloadURL(results[0])
+				url, err := client.NZBDownloadURL(results[0])
+				require.NoError(t, err)
 				require.NotEmpty(t, url, "expected a url")
 			})
 

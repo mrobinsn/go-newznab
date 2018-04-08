@@ -10,9 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"fmt"
-
 	log "github.com/Sirupsen/logrus"
+	"github.com/pkg/errors"
 )
 
 // Various constants for categories
@@ -173,7 +172,6 @@ func (c Client) search(vals url.Values) ([]NZB, error) {
 
 func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 	var nzbs []NZB
-	log.Debug("newznab:Client:Search: searching")
 	resp, err := c.getURL(c.buildURL(vals, path))
 	if err != nil {
 		return nzbs, err
@@ -181,12 +179,11 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 	var feed SearchResponse
 	err = xml.Unmarshal(resp, &feed)
 	if err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "failed to unmarshal xml feed")
 	}
 	if feed.ErrorCode != 0 {
-		return nil, fmt.Errorf("newznab api error %d: %s", feed.ErrorCode, feed.ErrorDesc)
+		return nil, errors.Errorf("newznab api error %d: %s", feed.ErrorCode, feed.ErrorDesc)
 	}
-	log.WithField("num", len(feed.Channel.NZBs)).Debug("newznab:Client:Search: found NZBs")
 	for _, gotNZB := range feed.Channel.NZBs {
 		nzb := NZB{
 			Title:          gotNZB.Title,
@@ -200,7 +197,7 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 			switch attr.Name {
 			case "tvairdate":
 				if parsedAirDate, err := parseDate(attr.Value); err != nil {
-					log.Errorf("newznab:Client:Search: failed to parse tvairdate: %v", err)
+					log.WithError(err).WithField("tvairdate", attr.Value).Debug("newznab:Client:Search: failed to parse tvairdate")
 				} else {
 					nzb.AirDate = parsedAirDate
 				}
@@ -259,7 +256,7 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 				nzb.CoverURL = attr.Value
 			case "usenetdate":
 				if parsedUsetnetDate, err := parseDate(attr.Value); err != nil {
-					log.Errorf("newznab:Client:Search: failed to parse usenetdate: %v", err)
+					log.WithError(err).WithField("usenetdate", attr.Value).Debug("failed to parse usenetdate")
 				} else {
 					nzb.UsenetDate = parsedUsetnetDate
 				}
@@ -280,7 +277,6 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 
 // PopulateComments fills in the Comments for the given NZB
 func (c Client) PopulateComments(nzb *NZB) error {
-	log.Debug("newznab:Client:PopulateComments: getting comments")
 	data, err := c.getURL(c.buildURL(url.Values{
 		"t":      []string{"comments"},
 		"id":     []string{nzb.ID},
@@ -292,7 +288,7 @@ func (c Client) PopulateComments(nzb *NZB) error {
 	var resp commentResponse
 	err = xml.Unmarshal(data, &resp)
 	if err != nil {
-		return err
+		return errors.Wrap(err, "failed to unmarshal comments xml data")
 	}
 
 	for _, rawComment := range resp.Channel.Comments {
@@ -301,10 +297,7 @@ func (c Client) PopulateComments(nzb *NZB) error {
 			Content: rawComment.Description,
 		}
 		if parsedPubDate, err := time.Parse(time.RFC1123Z, rawComment.PubDate); err != nil {
-			log.WithFields(log.Fields{
-				"pub_date": rawComment.PubDate,
-				"err":      err,
-			}).Error("newznab:Client:PopulateComments: failed to parse date")
+			log.WithError(err).WithField("pubdate", rawComment.PubDate).Debug("failed to parse comment date")
 		} else {
 			comment.PubDate = parsedPubDate
 		}
@@ -314,7 +307,7 @@ func (c Client) PopulateComments(nzb *NZB) error {
 }
 
 // NZBDownloadURL returns a URL to download the NZB from
-func (c Client) NZBDownloadURL(nzb NZB) string {
+func (c Client) NZBDownloadURL(nzb NZB) (string, error) {
 	return c.buildURL(url.Values{
 		"t":      []string{"get"},
 		"id":     []string{nzb.ID},
@@ -327,34 +320,32 @@ func (c Client) DownloadNZB(nzb NZB) ([]byte, error) {
 	return c.getURL(c.NZBDownloadURL(nzb))
 }
 
-func (c Client) getURL(url string) ([]byte, error) {
-	log.WithField("url", url).Debug("newznab:Client:getURL: getting url")
-	res, err := c.client.Get(url)
+func (c Client) getURL(url string, err error) ([]byte, error) {
 	if err != nil {
 		return nil, err
+	}
+	res, err := c.client.Get(url)
+	if err != nil {
+		return nil, errors.Wrapf(err, "http request failed: %s", url)
 	}
 
 	var data []byte
 	data, err = ioutil.ReadAll(res.Body)
 	res.Body.Close()
 	if err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "failed to read response body")
 	}
-
-	log.WithField("num_bytes", len(data)).Debug("newznab:Client:getURL: retrieved")
-
 	return data, nil
 }
 
-func (c Client) buildURL(vals url.Values, path string) string {
+func (c Client) buildURL(vals url.Values, path string) (string, error) {
 	parsedURL, err := url.Parse(c.apiBaseURL + path)
 	if err != nil {
-		log.WithError(err).Error("failed to parse base API url")
-		return ""
+		return "", errors.Wrap(err, "failed to parse base API url")
 	}
 
 	parsedURL.RawQuery = vals.Encode()
-	return parsedURL.String()
+	return parsedURL.String(), nil
 }
 
 func parseDate(date string) (time.Time, error) {
@@ -366,7 +357,7 @@ func parseDate(date string) (time.Time, error) {
 			return parsedTime, nil
 		}
 	}
-	return parsedTime, fmt.Errorf("failed to parse date %s as one of %s", date, strings.Join(formats, ", "))
+	return parsedTime, errors.Errorf("failed to parse date %s as one of %s", date, strings.Join(formats, ", "))
 }
 
 const (
