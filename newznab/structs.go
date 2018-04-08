@@ -126,7 +126,7 @@ type RawNZB struct {
 
 	Source struct {
 		URL   string `xml:"url,attr"`
-		Value string `xml:"url,chardata"`
+		Value string `xml:",chardata"`
 	} `xml:"source,omitempty"`
 
 	Date Time `xml:"pubDate,omitempty"`
@@ -152,7 +152,7 @@ func (t *Time) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if err := e.EncodeToken(start); err != nil {
 		return errors.Wrap(err, "failed to encode xml token")
 	}
-	if err := e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC822)))); err != nil {
+	if err := e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC1123Z)))); err != nil {
 		return errors.Wrap(err, "failed to encode xml token")
 	}
 	if err := e.EncodeToken(xml.EndElement{Name: start.Name}); err != nil {
