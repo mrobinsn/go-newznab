@@ -267,7 +267,7 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 				log.WithFields(log.Fields{
 					"name":  attr.Name,
 					"value": attr.Value,
-				}).Debug("encounted unknown attribute")
+				}).Debug("encontered unknown attribute")
 			}
 		}
 		if nzb.Size == 0 {
