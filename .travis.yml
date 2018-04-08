@@ -1,8 +1,9 @@
 language: go
-
 go:
   - stable
-
+before_install:
+  - go get -u github.com/mattn/goveralls
 script:
-  - go test -v -race ./...
+  - go test -v -race -covermode=count -coverprofile=profile.cov ./...
   - go vet ./...
+  - goveralls -coverprofile=provile.cov -service=travis-ci
