@@ -1,8 +1,6 @@
 package newznab
 
 import (
-	"crypto/md5"
-	"encoding/base64"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -10,12 +8,11 @@ import (
 	"regexp"
 	"testing"
 
-	log "github.com/Sirupsen/logrus"
-	. "github.com/smartystreets/goconvey/convey"
+	"github.com/stretchr/testify/require"
 )
 
 func TestUsenetCrawlerClient(t *testing.T) {
-	log.SetLevel(log.DebugLevel)
+	//log.SetLevel(log.DebugLevel)
 	apiKey := "gibberish"
 
 	// Set up our mock server
@@ -25,8 +22,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 		reg := regexp.MustCompile(`\W`)
 		fixedPath := reg.ReplaceAllString(r.URL.RawQuery, "_")
-
-		log.Info("Local fixture path: tests/fixtures" + r.URL.Path + "/" + fixedPath)
 
 		if r.URL.Query()["t"][0] == "get" {
 			// Fetch nzb
@@ -40,7 +35,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 		}
 
 		if err != nil {
-			log.Error(err)
 			w.WriteHeader(http.StatusNotFound)
 			w.Write([]byte("File not found"))
 		} else {
@@ -50,203 +44,130 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 	defer ts.Close()
 
-	Convey("I have setup a torznab client", t, func() {
+	t.Run("torznab client", func(t *testing.T) {
 		client := New(ts.URL, apiKey, 1234, true)
 
-		Convey("I can search using simple query", func() {
+		t.Run("Simple query search", func(t *testing.T) {
 			categories := []int{CategoryTVHD}
 			results, err := client.SearchWithQuery(categories, "Supernatural S11E01", "tvshows")
-			//for _, result := range results {
-			//	log.Info(result.JSONString())
-			//}
-
-			So(err, ShouldBeNil)
-			So(len(results), ShouldBeGreaterThan, 0)
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
 		})
 	})
 
-	Convey("I have setup a nzb client", t, func() {
+	t.Run("nzb client", func(t *testing.T) {
 		client := New(ts.URL, apiKey, 1234, false)
 		categories := []int{CategoryTVSD}
 
-		Convey("Handle errors", func() {
-
-			Convey("Return an error for an invalid search.", func() {
-				_, err := client.SearchWithTVDB(categories, 1234, 9, 2)
-				So(err, ShouldNotBeNil)
-			})
-
-			Convey("Return an error for invalid api usage.", func() {
-				_, err := client.SearchWithTVDB(categories, 5678, 9, 2)
-				So(err.Error(), ShouldEqual, "newznab api error 100: Invalid API Key")
-			})
+		t.Run("invalid search", func(t *testing.T) {
+			_, err := client.SearchWithTVDB(categories, 1234, 9, 2)
+			require.Error(t, err, "expected an error")
 		})
 
-		Convey("When getting TV show information", func() {
-
-			Convey("Given a category and a TheTVDB id", func() {
-				results, err := client.SearchWithTVDB(categories, 75682, 10, 1)
-
-				Convey("A valid result is returned.", func() {
-					So(err, ShouldBeNil)
-					So(len(results), ShouldBeGreaterThan, 0)
-				})
-			})
-
-			Convey("When given a category and a tvrage id", func() {
-				results, err := client.SearchWithTVRage(categories, 2870, 10, 1)
-
-				Convey("A valid result is returned.", func() {
-					So(err, ShouldBeNil)
-					So(len(results), ShouldBeGreaterThan, 0)
-				})
-
-				Convey("I can populate the comments for an NZB.", func() {
-					nzb := results[1]
-					So(len(nzb.Comments), ShouldEqual, 0)
-					So(nzb.NumComments, ShouldBeGreaterThan, 0)
-					err := client.PopulateComments(&nzb)
-					So(err, ShouldBeNil)
-
-					for _, comment := range nzb.Comments {
-						log.Info(comment.JSONString())
-					}
-
-					So(len(nzb.Comments), ShouldBeGreaterThan, 0)
-				})
-
-				Convey("I can get the download url.", func() {
-					url := client.NZBDownloadURL(results[0])
-					So(len(url), ShouldBeGreaterThan, 0)
-					log.Infof("URL: %s", url)
-				})
-
-				Convey("I can download the NZB.", func() {
-					bytes, err := client.DownloadNZB(results[0])
-					So(err, ShouldBeNil)
-
-					md5Sum := md5.Sum(bytes)
-					log.WithFields(log.Fields{
-						"num_bytes": len(bytes),
-						"md5":       base64.StdEncoding.EncodeToString(md5Sum[:]),
-					}).Info("downloaded")
-
-					So(len(bytes), ShouldBeGreaterThan, 0)
-				})
-			})
+		t.Run("invalid api usage", func(t *testing.T) {
+			_, err := client.SearchWithTVDB(categories, 5678, 9, 2)
+			require.Error(t, err, "expected an error")
+			require.EqualError(t, err, "newznab api error 100: Invalid API Key")
 		})
 
-		Convey("When getting movie information", func() {
-			Convey("Given multiple categories and an IMDB id", func() {
-				cats := []int{
-					CategoryMovieHD,
-					CategoryMovieBluRay,
+		t.Run("valid category and TheTVDB id", func(t *testing.T) {
+			results, err := client.SearchWithTVDB(categories, 75682, 10, 1)
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
+		})
+
+		t.Run("valid category and tvrage id", func(t *testing.T) {
+			results, err := client.SearchWithTVRage(categories, 2870, 10, 1)
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
+
+			t.Run("populate comments", func(t *testing.T) {
+				nzb := results[1]
+				require.Empty(t, nzb.Comments)
+				require.NotZero(t, nzb.NumComments)
+				err := client.PopulateComments(&nzb)
+				require.NoError(t, err)
+				require.NotEmpty(t, nzb.Comments, "expected at least one comment")
+				for _, comment := range nzb.Comments {
+					require.NotEmpty(t, comment, "comment should not be empty")
 				}
-				results, err := client.SearchWithIMDB(cats, "0371746")
-
-				So(err, ShouldBeNil)
-				So(len(results), ShouldBeGreaterThan, 0)
-
-				Convey("The results have different categories.", func() {
-					So(results[0].Category[1], ShouldEqual, "2040")
-					So(results[22].Category[1], ShouldEqual, "2050")
-				})
 			})
 
-			Convey("Given a single category and an IMDB id", func() {
-				cats := []int{CategoryMovieHD}
-				results, err := client.SearchWithIMDB(cats, "0364569")
+			t.Run("download url", func(t *testing.T) {
+				url, err := client.NZBDownloadURL(results[0])
+				require.NoError(t, err)
+				require.NotEmpty(t, url, "expected a url")
+			})
 
-				So(err, ShouldBeNil)
-				So(len(results), ShouldBeGreaterThan, 0)
-
-				Convey("I can get movie specific fields", func() {
-
-					Convey("An IMDB id.", func() {
-						imdbAttr := results[0].IMDBID
-						So(imdbAttr, ShouldEqual, "0364569")
-					})
-
-					Convey("An IMDB title.", func() {
-						imdbAttr := results[0].IMDBTitle
-						So(imdbAttr, ShouldEqual, "Oldboy")
-					})
-
-					Convey("An IMDB year.", func() {
-						imdbAttr := results[0].IMDBYear
-						So(imdbAttr, ShouldEqual, 2003)
-					})
-
-					Convey("An IMDB score.", func() {
-						imdbAttr := results[0].IMDBScore
-						So(imdbAttr, ShouldEqual, 8.4)
-					})
-
-					Convey("A cover URL.", func() {
-						imdbAttr := results[0].CoverURL
-						So(imdbAttr, ShouldEqual, "https://dognzb.cr/content/covers/movies/thumbs/364569.jpg")
-					})
-				})
+			t.Run("download nzb", func(t *testing.T) {
+				bytes, err := client.DownloadNZB(results[0])
+				require.NoError(t, err)
+				require.NotEmpty(t, bytes, "expected to download something")
 			})
 		})
 
-		Convey("When getting recent items via RSS", func() {
+		t.Run("multiple categories and IMDB id", func(t *testing.T) {
+			cats := []int{
+				CategoryMovieHD,
+				CategoryMovieBluRay,
+			}
+			results, err := client.SearchWithIMDB(cats, "0371746")
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
+
+			require.Equal(t, "2040", results[0].Category[1])
+			require.Equal(t, "2050", results[22].Category[1])
+		})
+
+		t.Run("single category and IMDB id", func(t *testing.T) {
+			cats := []int{CategoryMovieHD}
+			results, err := client.SearchWithIMDB(cats, "0364569")
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
+
+			t.Run("movie specific fields", func(t *testing.T) {
+				require.Equal(t, "0364569", results[0].IMDBID)
+				require.Equal(t, "Oldboy", results[0].IMDBTitle)
+				require.Equal(t, 2003, results[0].IMDBYear)
+				require.Equal(t, float32(8.4), results[0].IMDBScore)
+				require.Equal(t, "https://dognzb.cr/content/covers/movies/thumbs/364569.jpg", results[0].CoverURL)
+			})
+		})
+
+		t.Run("recent items via RSS", func(t *testing.T) {
 			num := 50
 			categories := []int{CategoryMovieAll, CategoryTVAll}
 
-			Convey("I can load the current RSS feed.", func() {
+			t.Run("recent items", func(t *testing.T) {
 				results, err := client.LoadRSSFeed(categories, num)
+				require.NoError(t, err)
+				require.Len(t, results, num)
+				require.Equal(t, "bcdbf3f1e7a1ef964527f1d40d5ec639", results[0].ID)
+				require.Equal(t, "030517-VSHS0101720WDA20H264V", results[6].Title)
 
-				Convey("A valid result is returned.", func() {
-					So(err, ShouldBeNil)
-					So(len(results), ShouldEqual, num)
+				t.Run("airdate with RFC1123Z format", func(t *testing.T) {
+					require.Equal(t, 2017, results[7].AirDate.Year())
 				})
 
-				Convey("A TV result is present.", func() {
-					guid := results[0].ID
-					So(guid, ShouldEqual, "bcdbf3f1e7a1ef964527f1d40d5ec639")
+				t.Run("usenetdate with RFC3339 format", func(t *testing.T) {
+					require.Equal(t, 2017, results[7].UsenetDate.Year())
 				})
-
-				Convey("A Movie result is present.", func() {
-					title := results[6].Title
-					So(title, ShouldEqual, "030517-VSHS0101720WDA20H264V")
-				})
-
-				Convey("An airdate with RFC1123Z format is parsed.", func() {
-					year := results[7].AirDate.Year()
-					So(year, ShouldEqual, 2017)
-				})
-
-				Convey("An usenetdate with RFC3339 format is parsed.", func() {
-					year := results[7].UsenetDate.Year()
-					So(year, ShouldEqual, 2017)
-				})
-
 			})
 
-			Convey("I can load the RSS feed up to a given NZB ID.", func() {
+			t.Run("up until", func(t *testing.T) {
 				results, err := client.LoadRSSFeedUntilNZBID(categories, num, "29527a54ac54bb7533abacd7dad66a6a", 0)
+				require.NoError(t, err)
+				require.Len(t, results, 101)
 
-				Convey("A valid result is returned.", func() {
-					So(err, ShouldBeNil)
-					So(len(results), ShouldEqual, 101)
+				t.Run("boundary results", func(t *testing.T) {
+					require.Equal(t, "8841b21c4d2fb96f0d47ca24cae9a5b7", results[0].ID)
+					require.Equal(t, "2c6c0e2ac562db69d8b3646deaf2d0cd", results[len(results)-1].ID)
 				})
 
-				Convey("Everything up to the given ID is returned.", func() {
-					firstID := results[0].ID
-					So(firstID, ShouldEqual, "8841b21c4d2fb96f0d47ca24cae9a5b7")
-
-					lastID := results[len(results)-1].ID
-					So(lastID, ShouldEqual, "2c6c0e2ac562db69d8b3646deaf2d0cd")
-				})
-			})
-
-			Convey("I can load the RSS feed up to a given NZB ID but will stop after N tries", func() {
-				results, err := client.LoadRSSFeedUntilNZBID(categories, num, "does-not-exist", 2)
-
-				Convey("100 results with 2 requests were fetched.", func() {
-					So(err, ShouldBeNil)
-					So(len(results), ShouldEqual, 100)
+				t.Run("RSS up until with failures/retries", func(t *testing.T) {
+					results, err := client.LoadRSSFeedUntilNZBID(categories, num, "does-not-exist", 2)
+					require.NoError(t, err)
+					require.Len(t, results, 100)
 				})
 			})
 		})

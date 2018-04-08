@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"time"
+
+	"github.com/pkg/errors"
 )
 
 // NZB represents an NZB found on the index
@@ -27,12 +29,12 @@ type NZB struct {
 	Genre    string   `json:"genre,omitempty"`
 
 	// TV Specific stuff
-	TVDBID   string `json:"genre,omitempty"`
-	TVRageID string `json:"genre,omitempty"`
+	TVDBID   string `json:"tvdbid,omitempty"`
+	TVRageID string `json:"tvrageid,omitempty"`
 	Season   string `json:"season,omitempty"`
 	Episode  string `json:"episode,omitempty"`
 	TVTitle  string `json:"tvtitle,omitempty"`
-	Rating   int    `json:"tvtitle,omitempty"`
+	Rating   int    `json:"rating,omitempty"`
 
 	// Movie Specific stuff
 	IMDBID    string  `json:"imdb,omitempty"`
@@ -147,9 +149,15 @@ type Time struct {
 }
 
 func (t *Time) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	e.EncodeToken(start)
-	e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC1123Z))))
-	e.EncodeToken(xml.EndElement{start.Name})
+	if err := e.EncodeToken(start); err != nil {
+		return errors.Wrap(err, "failed to encode xml token")
+	}
+	if err := e.EncodeToken(xml.CharData([]byte(t.UTC().Format(time.RFC1123Z)))); err != nil {
+		return errors.Wrap(err, "failed to encode xml token")
+	}
+	if err := e.EncodeToken(xml.EndElement{Name: start.Name}); err != nil {
+		return errors.Wrap(err, "failed to encode xml token")
+	}
 	return nil
 }
 
