@@ -76,6 +76,12 @@ func TestUsenetCrawlerClient(t *testing.T) {
 			require.NotEmpty(t, results, "expected results")
 		})
 
+		t.Run("valid category and TVMaze id", func(t *testing.T) {
+			results, err := client.SearchWithTVMaze(categories, 65, 10, 1)
+			require.NoError(t, err)
+			require.NotEmpty(t, results, "expected results")
+		})
+
 		t.Run("valid category and tvrage id", func(t *testing.T) {
 			results, err := client.SearchWithTVRage(categories, 2870, 10, 1)
 			require.NoError(t, err)

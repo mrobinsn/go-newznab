@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/pkg/errors"
+	log "github.com/sirupsen/logrus"
 )
 
 // Various constants for categories
@@ -25,6 +25,8 @@ const (
 	CategoryTVSD = 5030
 	// CategoryTVHD is for high-definition shows
 	CategoryTVHD = 5040
+	// CategoryTVUHD is for UHD shows
+	CategoryTVUHD = 5045
 	// CategoryTVOther is for other shows
 	CategoryTVOther = 5050
 	// CategoryTVSport is for sports shows
@@ -41,6 +43,8 @@ const (
 	CategoryMovieSD = 2030
 	// CategoryMovieHD is for high-definition movies
 	CategoryMovieHD = 2040
+	// CategoryMovieUHD is for UHD movies
+	CategoryMovieUHD = 2045
 	// CategoryMovieBluRay is for blu-ray movies
 	CategoryMovieBluRay = 2050
 	// CategoryMovie3D is for 3-D movies
@@ -95,6 +99,17 @@ func (c Client) SearchWithTVDB(categories []int, tvDBID int, season int, episode
 	})
 }
 
+// SearchWithTVMaze returns NZBs for the given parameters
+func (c Client) SearchWithTVMaze(categories []int, tvMazeID int, season int, episode int) ([]NZB, error) {
+	return c.search(url.Values{
+		"tvmazeid": []string{strconv.Itoa(tvMazeID)},
+		"cat":      c.splitCats(categories),
+		"season":   []string{strconv.Itoa(season)},
+		"episode":  []string{strconv.Itoa(episode)},
+		"t":        []string{"tvsearch"},
+	})
+}
+
 // SearchWithIMDB returns NZBs for the given parameters
 func (c Client) SearchWithIMDB(categories []int, imdbID string) ([]NZB, error) {
 	return c.search(url.Values{
@@ -119,6 +134,13 @@ func (c Client) LoadRSSFeed(categories []int, num int) ([]NZB, error) {
 		"num": []string{strconv.Itoa(num)},
 		"t":   c.splitCats(categories),
 		"dl":  []string{"1"},
+	})
+}
+
+// Capabilities returns the capabilities of this tracker
+func (c Client) Capabilities() (Capabilities, error) {
+	return c.caps(url.Values{
+		"t": []string{"caps"},
 	})
 }
 
@@ -168,6 +190,19 @@ func (c Client) rss(vals url.Values) ([]NZB, error) {
 func (c Client) search(vals url.Values) ([]NZB, error) {
 	vals.Set("apikey", c.apikey)
 	return c.process(vals, apiPath)
+}
+
+func (c Client) caps(vals url.Values) (Capabilities, error) {
+	vals.Set("apikey", c.apikey)
+	resp, err := c.getURL(c.buildURL(vals, apiPath))
+	if err != nil {
+		return Capabilities{}, errors.Wrap(err, "failed to get capabilities")
+	}
+	var cResp Capabilities
+	if err = xml.Unmarshal(resp, &cResp); err != nil {
+		return cResp, errors.Wrap(err, "failed to unmarshal xml")
+	}
+	return cResp, nil
 }
 
 func (c Client) process(vals url.Values, path string) ([]NZB, error) {
@@ -231,6 +266,8 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 				nzb.TVDBID = attr.Value
 			case "rageid":
 				nzb.TVRageID = attr.Value
+			case "tvmazeid":
+				nzb.TVMazeID = attr.Value
 			case "info":
 				nzb.Info = attr.Value
 			case "season":
@@ -260,6 +297,8 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 				} else {
 					nzb.UsenetDate = parsedUsetnetDate
 				}
+			case "resolution":
+				nzb.Resolution = attr.Value
 			default:
 				log.WithFields(log.Fields{
 					"name":  attr.Name,
