@@ -28,9 +28,12 @@ type NZB struct {
 	Info     string   `json:"info,omitempty"`
 	Genre    string   `json:"genre,omitempty"`
 
+	Resolution string `json:"resolution,omitempty"`
+
 	// TV Specific stuff
 	TVDBID   string `json:"tvdbid,omitempty"`
 	TVRageID string `json:"tvrageid,omitempty"`
+	TVMazeID string `json:"tvmazeid,omitempty"`
 	Season   string `json:"season,omitempty"`
 	Episode  string `json:"episode,omitempty"`
 	TVTitle  string `json:"tvtitle,omitempty"`
@@ -177,4 +180,34 @@ func (t *Time) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	*t = Time{date}
 	return nil
 
+}
+
+type Capabilities struct {
+	Server struct {
+		Title string `xml:"title,attr" json:"title,omitempty"`
+	} `xml:"server" json:"server,omitempty"`
+	Searching struct {
+		Search struct {
+			Available       string `xml:"available,attr" json:"available,omitempty"`
+			SupportedParams string `xml:"supportedParams,attr" json:"supported_params,omitempty"`
+		} `xml:"search" json:"search,omitempty"`
+		TvSearch struct {
+			Available       string `xml:"available,attr" json:"available,omitempty"`
+			SupportedParams string `xml:"supportedParams,attr" json:"supported_params,omitempty"`
+		} `xml:"tv-search" json:"tv_search,omitempty"`
+		MovieSearch struct {
+			Available       string `xml:"available,attr" json:"available,omitempty"`
+			SupportedParams string `xml:"supportedParams,attr" json:"supported_params,omitempty"`
+		} `xml:"movie-search" json:"movie_search,omitempty"`
+	} `xml:"searching" json:"searching,omitempty"`
+	Categories struct {
+		Category []struct {
+			ID     string `xml:"id,attr" json:"id,omitempty"`
+			Name   string `xml:"name,attr" json:"name,omitempty"`
+			Subcat []struct {
+				ID   string `xml:"id,attr" json:"id,omitempty"`
+				Name string `xml:"name,attr" json:"name,omitempty"`
+			} `xml:"subcat" json:"subcat,omitempty"`
+		} `xml:"category" json:"category,omitempty"`
+	} `xml:"categories" json:"categories,omitempty"`
 }

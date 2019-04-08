@@ -6,7 +6,7 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 
-> newznab XML API client for Go (golang)
+> newznab/torznab XML API client for Go (golang)
 
 ## Documentation
 [GoDoc](https://godoc.org/github.com/mrobinsn/go-newznab/newznab)
@@ -32,6 +32,12 @@ client := newznab.New("http://my-usenet-indexer", "my-api-key", 1234, false)
 ```
 Note the missing `/api` part of the URL. Depending on the called method either `/api` or `/rss` will be appended to the given base URL. A valid user ID is only required for RSS methods.
 
+### Get the capabilities of your tracker
+```
+caps, _ := client.Capabilities()
+```
+You will want to check the result of this to determine if your tracker supports searching by tvrage, imdb, tvmaze, etc.
+
 ### Search using a tvrage id:
 ```
 categories := []int{
@@ -48,6 +54,15 @@ categories := []int{
     newznab.CategoryMovieBluRay,
 }
 results, _ := client.SearchWithIMDB(categories, "0364569")
+```
+
+### Search using a tvmaze id:
+```
+categories := []int{
+    newznab.CategoryTVHD,
+    newznab.CategoryTVSD,
+}
+results, _ := client.SearchWithTVMaze(categories, 80, 3, 1)
 ```
 
 ### Search using a name and set of categories:
