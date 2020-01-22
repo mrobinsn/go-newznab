@@ -57,6 +57,8 @@ type Client struct {
 	apiBaseURL string
 	apiUserID  int
 	client     *http.Client
+
+	ExtendedAttrs bool
 }
 
 // New returns a new instance of Client
@@ -227,6 +229,7 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 			DownloadURL:    gotNZB.Enclosure.URL,
 			SourceEndpoint: c.apiBaseURL,
 			SourceAPIKey:   c.apikey,
+			UnmatchedAttrs: make(map[string]string),
 		}
 		for _, attr := range gotNZB.Attributes {
 			switch attr.Name {
@@ -303,7 +306,8 @@ func (c Client) process(vals url.Values, path string) ([]NZB, error) {
 				log.WithFields(log.Fields{
 					"name":  attr.Name,
 					"value": attr.Value,
-				}).Debug("encontered unknown attribute")
+				}).Debug("encountered unknown attribute")
+				nzb.UnmatchedAttrs[attr.Name] = attr.Value
 			}
 		}
 		if nzb.Size == 0 {
@@ -381,6 +385,10 @@ func (c Client) buildURL(vals url.Values, path string) (string, error) {
 	parsedURL, err := url.Parse(c.apiBaseURL + path)
 	if err != nil {
 		return "", errors.Wrap(err, "failed to parse base API url")
+	}
+
+	if c.ExtendedAttrs {
+		vals["extended"] = []string{"1"}
 	}
 
 	parsedURL.RawQuery = vals.Encode()

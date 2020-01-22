@@ -52,6 +52,9 @@ type NZB struct {
 	InfoHash    string `json:"infohash,omitempty"`
 	DownloadURL string `json:"download_url,omitempty"`
 	IsTorrent   bool   `json:"is_torrent,omitempty"`
+
+	// All the unmatched attributes from the response
+	UnmatchedAttrs map[string]string
 }
 
 // Comment represents a user comment left on an NZB record
