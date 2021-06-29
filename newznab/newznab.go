@@ -172,6 +172,14 @@ func (c Client) LoadRSSFeedUntilNZBID(categories []int, num int, id string, maxR
 	return nzbs, nil
 }
 
+// Details get the details of a particular nzb
+func (c Client) Details(guid string) (Details, error) {
+	return c.details(url.Values{
+		"t": []string{"details"},
+		"guid": []string{guid},
+	})
+}
+
 func (c Client) splitCats(cats []int) []string {
 	var categories, catsOut []string
 	for _, v := range cats {
@@ -203,6 +211,19 @@ func (c Client) caps(vals url.Values) (Capabilities, error) {
 		return cResp, errors.Wrap(err, "failed to unmarshal xml")
 	}
 	return cResp, nil
+}
+
+func (c Client) details(vals url.Values) (Details, error) {
+	vals.Set("apikey", c.apikey)
+	resp, err := c.getURL(c.buildURL(vals, apiPath))
+	if err != nil {
+		return Details{}, errors.Wrap(err, "failed to get details")
+	}
+	var dResp Details
+	if err = xml.Unmarshal(resp, &dResp); err != nil {
+		return dResp, errors.Wrap(err, "failed to unmarshal xml")
+	}
+	return dResp, nil
 }
 
 func (c Client) process(vals url.Values, path string) ([]NZB, error) {

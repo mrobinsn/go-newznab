@@ -211,3 +211,36 @@ type Capabilities struct {
 		} `xml:"category" json:"category,omitempty"`
 	} `xml:"categories" json:"categories,omitempty"`
 }
+
+type Details struct {
+	XMLName xml.Name `xml:"rss"`
+	Text    string   `xml:",chardata"`
+	Version string   `xml:"version,attr"`
+	Channel struct {
+		Text string `xml:",chardata"`
+		Item struct {
+			Text  string `xml:",chardata"`
+			Title string `xml:"title"`
+			Guid  struct {
+				Text        string `xml:",chardata"`
+				IsPermaLink string `xml:"isPermaLink,attr"`
+			} `xml:"guid"`
+			Link        string `xml:"link"`
+			Comments    string `xml:"comments"`
+			PubDate     string `xml:"pubDate"`
+			Category    string `xml:"category"`
+			Description string `xml:"description"`
+			Enclosure   struct {
+				Text   string `xml:",chardata"`
+				URL    string `xml:"url,attr"`
+				Length string `xml:"length,attr"`
+				Type   string `xml:"type,attr"`
+			} `xml:"enclosure"`
+			Attr []struct {
+				Text  string `xml:",chardata"`
+				Name  string `xml:"name,attr"`
+				Value string `xml:"value,attr"`
+			} `xml:"attr"`
+		} `xml:"item"`
+	} `xml:"channel"`
+} 
