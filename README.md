@@ -2,7 +2,8 @@
 [![GoDoc](https://godoc.org/github.com/mrobinsn/go-newznab/newznab?status.svg)](https://godoc.org/github.com/mrobinsn/go-newznab/newznab)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mrobinsn/go-newznab)](https://goreportcard.com/report/github.com/mrobinsn/go-newznab)
 [![Build Status](https://travis-ci.org/mrobinsn/go-newznab.svg?branch=master)](https://travis-ci.org/mrobinsn/go-newznab)
-[![Coverage Status](https://coveralls.io/repos/github/mrobinsn/go-newznab/badge.svg?branch=master)](https://coveralls.io/github/mrobinsn/go-newznab?branch=master)
+[![CircleCI](https://circleci.com/gh/mrobinsn/go-newznab.svg?style=svg)](https://circleci.com/gh/mrobinsn/go-newznab)
+[![codecov](https://codecov.io/gh/mrobinsn/go-newznab/branch/master/graph/badge.svg?token=MB1QbbEiAT)](https://codecov.io/gh/mrobinsn/go-newznab)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 
