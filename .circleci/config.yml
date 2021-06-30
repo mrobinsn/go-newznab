@@ -1,0 +1,50 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.16
+
+    working_directory: /go/src/github.com/mrobinsn/go-newznab
+
+    environment:
+      TEST_RESULTS: /tmp/test-results
+
+    steps:
+      - checkout
+      - run:
+          name: Install App
+          command: |
+            go install ./...
+      - run: 
+          name: Lint
+          command: |
+            curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.41.1
+            golangci-lint run -v
+      - run: 
+          name: Install Test Dependencies
+          command: |
+            (cd; GO111MODULE=on go get github.com/jstemmer/go-junit-report)
+            (cd; GO111MODULE=on go get github.com/go-playground/overalls)
+      - run:
+          name: Run unit tests
+          command: |
+            mkdir -p $TEST_RESULTS
+            trap "go-junit-report < \"${TEST_RESULTS}/go-test.out\" > \"${TEST_RESULTS}/go-test-report.xml\"" EXIT
+            go test -v -race ./... 2>&1 | tee "${TEST_RESULTS}/go-test.out"
+      - run:
+          name: Calculate Coverage
+          command: |
+            overalls -project /go/src/github.com/mrobinsn/go-newznab
+            mv overalls.coverprofile coverage.txt
+            bash <(curl -s https://codecov.io/bash)
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: raw-test-output
+      - store_test_results:
+          path: /tmp/test-results
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build

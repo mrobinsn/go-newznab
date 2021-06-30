@@ -36,9 +36,9 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 		if err != nil {
 			w.WriteHeader(http.StatusNotFound)
-			w.Write([]byte("File not found"))
+			w.Write([]byte("File not found")) // nolint:errcheck
 		} else {
-			w.Write(f)
+			w.Write(f) // nolint:errcheck
 		}
 	}))
 
