@@ -68,7 +68,7 @@ results, _ := client.SearchWithTVMaze(categories, 80, 3, 1)
 
 ### Search using a name and set of categories:
 ```
-results, _ := client.SearchWithQueries(categories, "Oldboy", "movie")
+results, _ := client.SearchWithQuery(categories, "Oldboy", "movie")
 ```
 
 ### Get latest releases for set of categories:
