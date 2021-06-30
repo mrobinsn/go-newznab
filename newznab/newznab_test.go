@@ -22,6 +22,7 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 		reg := regexp.MustCompile(`\W`)
 		fixedPath := reg.ReplaceAllString(r.URL.RawQuery, "_")
+		fmt.Println(fixedPath)
 
 		if r.URL.Query()["t"][0] == "get" {
 			// Fetch nzb
@@ -176,6 +177,11 @@ func TestUsenetCrawlerClient(t *testing.T) {
 					require.Len(t, results, 100)
 				})
 			})
+		})
+
+		t.Run("single nzb details", func(t *testing.T) {
+			_, err := client.Details("4694b91a86adc4ebd3b289687ebf4b0d")
+			require.NoError(t, err)
 		})
 	})
 }

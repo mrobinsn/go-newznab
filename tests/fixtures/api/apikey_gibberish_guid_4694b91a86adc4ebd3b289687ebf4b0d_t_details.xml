@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:newznab="http://nzbgeek.info/feeds/attributes/">
+  <channel>
+    <atom:link href="https://api.nzbgeek.info/api?t=details&amp;apikey=7c1yDyAz12ZJDpUunuXyAeFxeFv0jjeI&amp;guid=cd0faeca5a5b93c50b3f568b7e2ec560" rel="self" type="application/rss+xml" />
+    <title>api.nzbgeek.info</title>
+    <description>NZBgeek API</description>
+    <link>http://api.nzbgeek.info/</link>
+    <language>en-gb</language>
+    <webMaster>info@nzbgeek.info (NZBgeek)</webMaster>
+    <category></category>
+    <image>
+      <url>https://api.nzbgeek.info/covers/nzbgeek.png</url>
+      <title>api.nzbgeek.info</title>
+      <link>http://api.nzbgeek.info/</link>
+      <description>NZBgeek</description>
+    </image>
+    <item>
+      <title>Car.Craft-July.2015</title>
+      <guid isPermaLink="true">https://nzbgeek.info/geekseek.php?guid=4694b91a86adc4ebd3b289687ebf4b0d</guid>
+      <link>http://api.nzbgeek.info/api?t=get&amp;id=4694b91a86adc4ebd3b289687ebf4b0d&amp;apikey=7c1yDyAz12ZJDpUunuXyAeFxeFv0jjeI</link>
+      <comments>https://nzbgeek.info/geekseek.php?guid=4694b91a86adc4ebd3b289687ebf4b0d</comments>
+      <pubDate>Fri, 24 Apr 2015 15:03:34 +0000</pubDate>
+      <category>Books > Mags</category>
+      <description>Car.Craft-July.2015</description>
+      <enclosure url="http://api.nzbgeek.info/api?t=get&amp;id=4694b91a86adc4ebd3b289687ebf4b0d&amp;apikey=7c1yDyAz12ZJDpUunuXyAeFxeFv0jjeI" length="30383000" type="application/x-nzb"/>
+      <newznab:attr name="category" value="7000"/>
+      <newznab:attr name="category" value="7010"/>
+      <newznab:attr name="size" value="30383000"/>
+      <newznab:attr name="guid" value="4694b91a86adc4ebd3b289687ebf4b0d"/>
+      <newznab:attr name="files" value="6"/>
+      <newznab:attr name="poster" value="anonymous"/>
+      <newznab:attr name="grabs" value="9"/>
+      <newznab:attr name="comments" value="0"/>
+      <newznab:attr name="password" value="0"/>
+      <newznab:attr name="usenetdate" value="Fri, 24 Apr 2015 15:03:34 +0000"/>
+      <newznab:attr name="group" value="alt.binaries.nzb"/>
+      <newznab:attr name="thumbsup" value="0"/>
+      <newznab:attr name="thumbsdown" value="0"/>
+    </item>
+  </channel>
+</rss>
