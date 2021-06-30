@@ -22,7 +22,6 @@ func TestUsenetCrawlerClient(t *testing.T) {
 
 		reg := regexp.MustCompile(`\W`)
 		fixedPath := reg.ReplaceAllString(r.URL.RawQuery, "_")
-		fmt.Println(fixedPath)
 
 		if r.URL.Query()["t"][0] == "get" {
 			// Fetch nzb
