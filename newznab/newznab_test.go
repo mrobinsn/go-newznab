@@ -179,8 +179,9 @@ func TestUsenetCrawlerClient(t *testing.T) {
 		})
 
 		t.Run("single nzb details", func(t *testing.T) {
-			_, err := client.Details("4694b91a86adc4ebd3b289687ebf4b0d")
+			d, err := client.Details("4694b91a86adc4ebd3b289687ebf4b0d")
 			require.NoError(t, err)
+			require.Equal(t, "Car.Craft-July.2015", d.Channel.Item.Title)
 		})
 	})
 }
